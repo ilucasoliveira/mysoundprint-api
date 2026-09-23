@@ -1,0 +1,28 @@
+[project]
+name = "mysoundprint"
+version = "0.1.0"
+description = "Personal listening statistics API built on top of the Spotify Web API."
+authors = [
+    {name = "Lucas de Oliveira Pimentel",email = "lucasoliveirapimentel.dev@gmail.com"}
+]
+license = "MIT"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi (>=0.141.1,<0.142.0)",
+    "uvicorn[standard] (>=0.53.0,<0.54.0)",
+    "pydantic-settings (>=2.15.0,<3.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+package-mode = false
+[dependency-groups]
+dev = [
+    "ruff (>=0.16.8,<0.17.0)"
+]
