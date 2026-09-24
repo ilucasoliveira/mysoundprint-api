@@ -1,5 +1,7 @@
+import os
 from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
@@ -7,6 +9,7 @@ class Settings(BaseSettings):
     spotify_client_id: str
     spotify_client_secret: SecretStr
     spotify_redirect_uri: str
-    jwt_secret_key: str
+    jwt_secret_key: SecretStr
+    redis_url: str
 
 settings = Settings()

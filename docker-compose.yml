@@ -1,0 +1,7 @@
+services:
+  redis:
+    image: redis:8-alpine
+    container_name: mysoundprint-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"

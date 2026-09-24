@@ -1,0 +1,54 @@
+# Git
+.git
+.gitignore
+.github
+
+# Secrets
+.env
+.env.local
+*.pem
+*.key
+
+# Virtual environment
+.venv
+venv
+env
+
+# Python bytecode and build artifacts
+__pycache__
+*.py[cod]
+*.pyc
+build
+dist
+*.egg-info
+
+# Tests and caches
+.pytest_cache
+.coverage
+htmlcov
+.mypy_cache
+.ruff_cache
+
+# Docker files themselves
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Editor
+.vscode
+.idea
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docs
+README.md
+docs
+*.md
+
+# Logs
+*.log
+logs
