@@ -1,6 +1,6 @@
 import secrets
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from fastapi.responses import RedirectResponse
 from urllib.parse import urlencode
 
@@ -30,3 +30,17 @@ async def spotify_login():
     
     url = f"{SPOTIFY_AUTH_URL}?{urlencode(params)}"
     return RedirectResponse(url)
+
+@router.get("/callback")
+async def spotify_callback(code: str | None = None, state: str | None = None, error: str | None = None):
+    if error:
+        raise HTTPException(status_code=400, detail=f"authorization failed: {error}")
+    
+    if not code or not state:
+        raise HTTPException(status_code=400, detail="missing code or state")
+    
+    saved_state = await redis_client.getdel(_state_key(state))
+    if saved_state is None:
+        raise HTTPException(status_code=400, detail="invalid or expired state")
+    
+    return {"code": code}
