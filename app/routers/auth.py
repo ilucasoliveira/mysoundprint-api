@@ -6,6 +6,7 @@ from urllib.parse import urlencode
 
 from app.config import settings
 from app.services.redis_client import redis_client
+from app.services.spotify_auth import exchange_code_for_token
 
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
 SCOPES = "user-top-read user-read-recently-played"
@@ -43,4 +44,6 @@ async def spotify_callback(code: str | None = None, state: str | None = None, er
     if saved_state is None:
         raise HTTPException(status_code=400, detail="invalid or expired state")
     
-    return {"code": code}
+    token_data = await exchange_code_for_token(code)
+    
+    return {"ok": True, "expires_in": token_data["expires_in"], "scope": token_data["scope"]}
