@@ -1,12 +1,17 @@
 import secrets
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import RedirectResponse
+from sqlalchemy.ext.asyncio import AsyncSession
 from urllib.parse import urlencode
 
+
 from app.config import settings
+from app.models.database import get_db
+from app.models.user import User
 from app.services.redis_client import redis_client
 from app.services.spotify_auth import exchange_code_for_token, get_current_user_profile
+from app.services.user_service import upsert_user
 
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
 SCOPES = "user-top-read user-read-recently-played"
@@ -33,7 +38,7 @@ async def spotify_login():
     return RedirectResponse(url)
 
 @router.get("/callback")
-async def spotify_callback(code: str | None = None, state: str | None = None, error: str | None = None):
+async def spotify_callback(code: str | None = None, state: str | None = None, error: str | None = None, db: AsyncSession = Depends(get_db)):
     if error:
         raise HTTPException(status_code=400, detail=f"authorization failed: {error}")
     
@@ -48,4 +53,9 @@ async def spotify_callback(code: str | None = None, state: str | None = None, er
     
     profile = await get_current_user_profile(token_data["access_token"])
     
-    return {"account_id": profile["account_id"], "display_name": profile["display_name"]}
+    user = await upsert_user(db, profile, token_data)
+    return {
+        "id": user.id,
+        "spotify_account_id": user.spotify_account_id,
+        "display_name": user.display_name
+    }
