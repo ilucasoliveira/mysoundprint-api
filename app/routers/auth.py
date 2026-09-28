@@ -8,10 +8,10 @@ from urllib.parse import urlencode
 
 from app.config import settings
 from app.models.database import get_db
-from app.models.user import User
 from app.services.redis_client import redis_client
 from app.services.spotify_auth import exchange_code_for_token, get_current_user_profile
 from app.services.user_service import upsert_user
+from app.services.security import create_access_token
 
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
 SCOPES = "user-top-read user-read-recently-played"
@@ -54,8 +54,8 @@ async def spotify_callback(code: str | None = None, state: str | None = None, er
     profile = await get_current_user_profile(token_data["access_token"])
     
     user = await upsert_user(db, profile, token_data)
+    
     return {
-        "id": user.id,
-        "spotify_account_id": user.spotify_account_id,
-        "display_name": user.display_name
-    }
+    "access_token": create_access_token(user.id),
+    "token_type": "bearer"
+}
