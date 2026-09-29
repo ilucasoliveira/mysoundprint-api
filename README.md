@@ -1,11 +1,11 @@
 # MySoundPrint API
 
 A FastAPI backend that turns your Spotify listening history into personal
-statistics: top artists and tracks across time ranges, genre diversity and
-how your taste shifts over time.
+statistics: how your top artists and tracks shift across time ranges, how
+concentrated your listening is, and which eras of music you actually play.
 
-> **Work in progress.** The OAuth2 layer is done. Statistics endpoints are
-> being built.
+> **Work in progress.** Authentication, token refresh and the cached Spotify
+> client are done. Statistics endpoints are being built.
 
 ## How the authentication works
 
@@ -79,24 +79,31 @@ This means you cannot simply log in with your own Spotify account here. The
 API is therefore built with a demo mode that serves a stored snapshot through
 the same endpoints, so the project can be explored without an account.
 
-Apps registered after November 2024 also lost access to the Audio Features,
-Audio Analysis, Recommendations and Related Artists endpoints. All statistics
-in this project are derived from top items and recently played tracks.
+The Web API itself has also been shrinking. Apps registered after November
+2024 lost the Audio Features, Audio Analysis, Recommendations and Related
+Artists endpoints. A second round in February 2026 removed the bulk artists
+endpoint for development mode apps and stripped `genres`, `popularity` and
+`followers` from the artist object.
+
+Every statistic here was designed against what the API actually returns
+today, verified by inspecting live responses rather than trusting the
+reference docs, which still describe fields that no longer arrive.
 
 ## Endpoints
 
-| Method | Path             | Description                                         |
-| ------ | ---------------- | --------------------------------------------------- |
-| GET    | `/health`        | Liveness check                                      |
-| GET    | `/auth/login`    | Redirects to the Spotify consent screen             |
-| GET    | `/auth/callback` | Validates `state` and exchanges the code for tokens |
+| Method | Path             | Description                                            |
+| ------ | ---------------- | ------------------------------------------------------ |
+| GET    | `/health`        | Liveness check                                         |
+| GET    | `/auth/login`    | Redirects to the Spotify consent screen                |
+| GET    | `/auth/callback` | Validates `state` and exchanges the code for tokens    |
+| GET    | `/auth/me`       | Returns the authenticated user, requires a session JWT |
 
 ## Roadmap
 
 - [x] OAuth2 authorization code flow with CSRF protection
-- [ ] Persist users and tokens, issue a session JWT
-- [ ] Automatic access token refresh
-- [ ] Spotify API client with Redis caching and 429 handling
+- [x] Persist users and tokens, issue a session JWT
+- [x] Automatic access token refresh
+- [x] Spotify API client with Redis caching and 429 handling
 - [ ] Statistics endpoints
 - [ ] Demo mode, tests and deployment
 
