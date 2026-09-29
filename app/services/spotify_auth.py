@@ -35,3 +35,16 @@ async def get_current_user_profile(access_token: str) -> dict:
         response = await client.get(f"{SPOTIFY_API_BASE_URL}/me", headers=headers)
         response.raise_for_status()
         return response.json()
+
+async def refresh_access_token(refresh_token: str) -> dict:
+    payload = {
+        "grant_type": "refresh_token",
+        "refresh_token": refresh_token,
+    }
+    
+    headers = {"Authorization": _build_basic_auth_header()}
+    
+    async with httpx.AsyncClient() as client:
+        response = await client.post(SPOTIFY_TOKEN_URL, data=payload, headers=headers)
+        response.raise_for_status()
+        return response.json()
