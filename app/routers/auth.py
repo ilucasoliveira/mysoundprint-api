@@ -14,6 +14,7 @@ from app.services.spotify_auth import exchange_code_for_token, get_current_user_
 from app.services.user_service import upsert_user, get_valid_access_token
 from app.services.security import create_access_token
 from app.services.security import get_current_user
+from app.services.spotify_client import get_top_items
 
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
 SCOPES = "user-top-read user-read-recently-played"
@@ -65,3 +66,7 @@ async def spotify_callback(code: str | None = None, state: str | None = None, er
 @router.get("/me")
 async def read_me(user: User = Depends(get_current_user)):
     return {"id": user.id, "display_name": user.display_name}
+
+@router.get("/top-artists")
+async def top_artists(user: User = Depends(get_current_user), db: AsyncSession = Depends(get_db)):
+    return await get_top_items(db, user, "artists")
