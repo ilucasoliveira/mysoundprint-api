@@ -14,15 +14,17 @@ from app.services.spotify_auth import exchange_code_for_token, get_current_user_
 from app.services.user_service import upsert_user, get_valid_access_token
 from app.services.security import create_access_token
 from app.services.security import get_current_user
-from app.services.spotify_client import get_top_items
+from app.services.spotify_client import get_top_items, spotify_get
 
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
 SCOPES = "user-top-read user-read-recently-played"
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 
+
 def _state_key(state: str) -> str:
     return f"oauth_state:{state}"
+
 
 @router.get("/login")
 async def spotify_login():
@@ -32,41 +34,56 @@ async def spotify_login():
         "response_type": "code",
         "redirect_uri": settings.spotify_redirect_uri,
         "scope": SCOPES,
-        "state": state
+        "state": state,
     }
-    
+
     await redis_client.set(_state_key(state), "1", ex=300)
-    
+
     url = f"{SPOTIFY_AUTH_URL}?{urlencode(params)}"
     return RedirectResponse(url)
 
+
 @router.get("/callback")
-async def spotify_callback(code: str | None = None, state: str | None = None, error: str | None = None, db: AsyncSession = Depends(get_db)):
+async def spotify_callback(
+    code: str | None = None,
+    state: str | None = None,
+    error: str | None = None,
+    db: AsyncSession = Depends(get_db),
+):
     if error:
         raise HTTPException(status_code=400, detail=f"authorization failed: {error}")
-    
+
     if not code or not state:
         raise HTTPException(status_code=400, detail="missing code or state")
-    
+
     saved_state = await redis_client.getdel(_state_key(state))
     if saved_state is None:
         raise HTTPException(status_code=400, detail="invalid or expired state")
-    
+
     token_data = await exchange_code_for_token(code)
-    
+
     profile = await get_current_user_profile(token_data["access_token"])
-    
+
     user = await upsert_user(db, profile, token_data)
-    
-    return {
-    "access_token": create_access_token(user.id),
-    "token_type": "bearer"
-}
+
+    return {"access_token": create_access_token(user.id), "token_type": "bearer"}
+
 
 @router.get("/me")
 async def read_me(user: User = Depends(get_current_user)):
     return {"id": user.id, "display_name": user.display_name}
 
-@router.get("/top-artists")
-async def top_artists(user: User = Depends(get_current_user), db: AsyncSession = Depends(get_db)):
-    return await get_top_items(db, user, "artists")
+
+@router.get("/debug-tracks")
+async def debug_tracks(
+    user: User = Depends(get_current_user), db: AsyncSession = Depends(get_db)
+):
+    return await get_top_items(db, user, "tracks", limit=5)
+
+
+@router.get("/debug-recent")
+async def debug_recent(
+    user: User = Depends(get_current_user), db: AsyncSession = Depends(get_db)
+):
+    token = await get_valid_access_token(db, user)
+    return await spotify_get(token, "/me/player/recently-played", {"limit": 5})
