@@ -4,7 +4,11 @@ from typing import Literal
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.services.stats import decade_distribution, compare_time_ranges
+from app.services.stats import (
+    decade_distribution,
+    compare_time_ranges,
+    listening_concentration,
+)
 from app.services.security import get_current_user
 from app.services.spotify_client import get_top_items
 from app.models.user import User
@@ -45,3 +49,15 @@ async def get_time_range_comparison(
     result["item_type"] = item_type
 
     return result
+
+
+@router.get("/concentration", status_code=200)
+async def get_listening_concentration(
+    time_range: TimeRange = "medium_term",
+    limit: int = 50,
+    top_n: int = 5,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    top_tracks = await get_top_items(db, current_user, "tracks", time_range, limit)
+    return listening_concentration(top_tracks, top_n)

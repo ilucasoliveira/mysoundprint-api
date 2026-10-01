@@ -90,3 +90,24 @@ def compare_time_ranges(baseline: dict, current: dict) -> dict:
         "unchanged_count": unchanged,
         "stable_count": len(baseline_ids & current_ids),
     }
+
+
+def listening_concentration(data: dict, top_n: int = 5) -> dict:
+    primary_artists = [item["artists"][0]["name"] for item in data["items"]]
+
+    total = len(primary_artists)
+    counter = Counter(primary_artists)
+    ranking = counter.most_common(top_n)
+
+    top_3_count = sum(count for _, count in counter.most_common(3))
+
+    return {
+        "total_tracks": total,
+        "distinct_artists": len(counter),
+        "tracks_per_artist": round(total / len(counter), 2),
+        "top_3_share": round(top_3_count / total * 100, 1),
+        "top_artists": [
+            {"name": name, "count": count, "share": round(count / total * 100, 1)}
+            for name, count in ranking
+        ],
+    }
