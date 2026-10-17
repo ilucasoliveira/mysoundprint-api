@@ -2,10 +2,12 @@ FROM python:3.14-slim AS builder
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    POETRY_VERSION=2.1.1 \
+    POETRY_VERSION=2.4.1 \
     POETRY_VIRTUALENVS_IN_PROJECT=1 \
     POETRY_NO_INTERACTION=1
 
+# Pinned to the version that generated poetry.lock. An older Poetry reads a
+# newer lock file as "changed significantly" and refuses to install.
 RUN pip install --no-cache-dir "poetry==${POETRY_VERSION}"
 
 WORKDIR /app
