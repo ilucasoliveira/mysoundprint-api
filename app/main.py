@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.routers import auth, stats
+from app.routers import auth, demo, stats
 
 DESCRIPTION = """Personal listening statistics built on top of the Spotify Web API.
 
@@ -30,3 +30,4 @@ async def health_check():
 
 app.include_router(auth.router)
 app.include_router(stats.router)
+app.include_router(demo.router)

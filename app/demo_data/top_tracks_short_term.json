@@ -1,0 +1,1388 @@
+{
+  "items": [
+    {
+      "id": "6KOEK6SeCEZOQkLj5M1PxH",
+      "name": "California Gurls",
+      "duration_ms": 234653,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        },
+        {
+          "id": "7hJcb9fa4alzcOq3EaNPoG",
+          "name": "Snoop Dogg"
+        }
+      ],
+      "album": {
+        "id": "2eQMC9nJE3f3hCNKlYYHL1",
+        "name": "Teenage Dream",
+        "release_date": "2010-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851d20c38f295039520d688a888",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6KOEK6SeCEZOQkLj5M1PxH"
+      }
+    },
+    {
+      "id": "5J4ZkQpzMUFojo1CtAZYpn",
+      "name": "Love Me Harder",
+      "duration_ms": 236133,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "66CXWjxzNUsdJxJ2JdwvnR",
+          "name": "Ariana Grande"
+        },
+        {
+          "id": "1Xyo4u8uXC1ZmMpatF05PJ",
+          "name": "The Weeknd"
+        }
+      ],
+      "album": {
+        "id": "6EVYTRG1drKdO8OnIQBeEj",
+        "name": "My Everything (Deluxe)",
+        "release_date": "2014-08-22",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851deec12a28d1e336c5052e9aa",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5J4ZkQpzMUFojo1CtAZYpn"
+      }
+    },
+    {
+      "id": "0ErK6K0kYr0Ow2RkPMhmMs",
+      "name": "Shout Out to My Ex",
+      "duration_ms": 246240,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "3e7awlrlDSwF3iM0WBjGMp",
+          "name": "Little Mix"
+        }
+      ],
+      "album": {
+        "id": "4w49hcqZt66HZX0MJHfW0m",
+        "name": "Glory Days (Expanded Edition)",
+        "release_date": "2016-11-18",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048513042c53026e29faf3a21c9f9",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0ErK6K0kYr0Ow2RkPMhmMs"
+      }
+    },
+    {
+      "id": "3avYqdwHKEq8beXbeWCKqJ",
+      "name": "Last Friday Night (T.G.I.F.)",
+      "duration_ms": 230733,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "2eQMC9nJE3f3hCNKlYYHL1",
+        "name": "Teenage Dream",
+        "release_date": "2010-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851d20c38f295039520d688a888",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3avYqdwHKEq8beXbeWCKqJ"
+      }
+    },
+    {
+      "id": "4kkeuVl6gF3RMqE4Nn5W3E",
+      "name": "E.T.",
+      "duration_ms": 206373,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "2eQMC9nJE3f3hCNKlYYHL1",
+        "name": "Teenage Dream",
+        "release_date": "2010-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851d20c38f295039520d688a888",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4kkeuVl6gF3RMqE4Nn5W3E"
+      }
+    },
+    {
+      "id": "0HEzuLLojblUOaUSdmJ9gl",
+      "name": "Did you know that there's a tunnel under Ocean Blvd",
+      "duration_ms": 285050,
+      "explicit": true,
+      "artists": [
+        {
+          "id": "00FQb4jTyendYWaN8pK0wa",
+          "name": "Lana Del Rey"
+        }
+      ],
+      "album": {
+        "id": "5HOHne1wzItQlIYmLXLYfZ",
+        "name": "Did you know that there's a tunnel under Ocean Blvd",
+        "release_date": "2023-03-24",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485159ae8cf65d498afdd5585634",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0HEzuLLojblUOaUSdmJ9gl"
+      }
+    },
+    {
+      "id": "3atXfSavxWkrzRNuwzlow6",
+      "name": "Queendom",
+      "duration_ms": 206640,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1WgXqy2Dd70QQOU7Ay074N",
+          "name": "AURORA"
+        }
+      ],
+      "album": {
+        "id": "1jorKBzr3vs08LDggKCAyr",
+        "name": "Infections Of A Different Kind – Step 1",
+        "release_date": "2018-09-28",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851017bf79391caaba8b12f1a42",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3atXfSavxWkrzRNuwzlow6"
+      }
+    },
+    {
+      "id": "6nCDnzErqalOaIY3EJM8NK",
+      "name": "Telephone",
+      "duration_ms": 220626,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        },
+        {
+          "id": "6vWDO969PvNqNYHIOW5v0m",
+          "name": "Beyoncé"
+        }
+      ],
+      "album": {
+        "id": "1X9AFMWRGElyFpySNcyI4x",
+        "name": "The Fame Monster (UK Deluxe)",
+        "release_date": "2009-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a8b02cfd80bb576eaade17b8",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6nCDnzErqalOaIY3EJM8NK"
+      }
+    },
+    {
+      "id": "7eYzn1CuiJK6VvUhf8zA6k",
+      "name": "WHERE IS MY HUSBAND!",
+      "duration_ms": 197142,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "5KKpBU5eC2tJDzf0wmlRp2",
+          "name": "RAYE"
+        }
+      ],
+      "album": {
+        "id": "3ZN01xzenGMhWHdC5kfAe9",
+        "name": "THIS MUSIC MAY CONTAIN HOPE.",
+        "release_date": "2026-03-27",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485197c0928704e5a2bd8d4c5b90",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7eYzn1CuiJK6VvUhf8zA6k"
+      }
+    },
+    {
+      "id": "25ZttbpeUKDOm3aghD2oBJ",
+      "name": "I Kissed A Girl",
+      "duration_ms": 179640,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "1vFFZPioAu0vrJRcGoyGX8",
+        "name": "One Of The Boys",
+        "release_date": "2008",
+        "release_date_precision": "year",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485131cc26681b0164332fa26634",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/25ZttbpeUKDOm3aghD2oBJ"
+      }
+    },
+    {
+      "id": "2yLa0QULdQr0qAIvVwN6B5",
+      "name": "...Ready For It?",
+      "duration_ms": 208186,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift"
+        }
+      ],
+      "album": {
+        "id": "6DEjYFkNZh67HP7R9PSZvv",
+        "name": "reputation",
+        "release_date": "2017-11-10",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851da5d5aeeabacacc1263c0f4b",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2yLa0QULdQr0qAIvVwN6B5"
+      }
+    },
+    {
+      "id": "5TLe0pvHJ9M3aemysRpogS",
+      "name": "Kiss the Sky (from The Wild Robot)",
+      "duration_ms": 215716,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6WY7D3jk8zTrHtmkqqo5GI",
+          "name": "Maren Morris"
+        }
+      ],
+      "album": {
+        "id": "1jVIOXL9M4U6T9B8KWW4TW",
+        "name": "Kiss the Sky (from The Wild Robot)",
+        "release_date": "2024-08-28",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511c19154ab19b35a3023f4144",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5TLe0pvHJ9M3aemysRpogS"
+      }
+    },
+    {
+      "id": "1dzQoRqT5ucxXVaAhTcT0J",
+      "name": "Just Dance",
+      "duration_ms": 241933,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        },
+        {
+          "id": "7fObcBw9VM3x7ntWKCYl0z",
+          "name": "Colby O'Donis"
+        }
+      ],
+      "album": {
+        "id": "1qwlxZTNLe1jq3b0iidlue",
+        "name": "The Fame",
+        "release_date": "2008-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e691217483df8798445c82e2",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1dzQoRqT5ucxXVaAhTcT0J"
+      }
+    },
+    {
+      "id": "2009X8GyWTqyxIdzAEYW6N",
+      "name": "The One That Got Away",
+      "duration_ms": 227333,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "2UG6T6f0Qc9SaBCIcaviLM",
+        "name": "Teenage Dream",
+        "release_date": "2010-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511d955011a3ed477dc77865ad",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2009X8GyWTqyxIdzAEYW6N"
+      }
+    },
+    {
+      "id": "2yPoXCs7BSIUrucMdK5PzV",
+      "name": "Umbrella",
+      "duration_ms": 275986,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "5pKCCKE2ajJHZ9KAiaK11H",
+          "name": "Rihanna"
+        },
+        {
+          "id": "3nFkdlSjzX9mRTtwJOzDYB",
+          "name": "JAŸ-Z"
+        }
+      ],
+      "album": {
+        "id": "4OXnPSBtZo8PBFiTOfuumP",
+        "name": "Good Girl Gone Bad",
+        "release_date": "2007-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851b9ff0a5f40d3406aed5e5e3b",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2yPoXCs7BSIUrucMdK5PzV"
+      }
+    },
+    {
+      "id": "2s0ouHqJebHfiQ6C1GUFJd",
+      "name": "Milkshake - Radio Mix",
+      "duration_ms": 182626,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "0IF46mUS8NXjgHabxk2MCM",
+          "name": "Kelis"
+        }
+      ],
+      "album": {
+        "id": "5YXBnZzECnOFgssE5q43go",
+        "name": "Tasty",
+        "release_date": "2003-12-05",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485180c0124b18f8d2e3152bbb02",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2s0ouHqJebHfiQ6C1GUFJd"
+      }
+    },
+    {
+      "id": "7GCElX2eJA5t0AFWw3WzKn",
+      "name": "This Is How We Do",
+      "duration_ms": 204285,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "3jB9yFDwRe3KhtGnHXJntk",
+        "name": "PRISM",
+        "release_date": "2013-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e9a057052d59004caf47e22",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7GCElX2eJA5t0AFWw3WzKn"
+      }
+    },
+    {
+      "id": "1ulXmqjktxSdrdT1bzc69H",
+      "name": "Hot N Cold",
+      "duration_ms": 220226,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "1vFFZPioAu0vrJRcGoyGX8",
+        "name": "One Of The Boys",
+        "release_date": "2008",
+        "release_date_precision": "year",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485131cc26681b0164332fa26634",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1ulXmqjktxSdrdT1bzc69H"
+      }
+    },
+    {
+      "id": "2DRMuw0U0QbkVQxWxdJV3M",
+      "name": "Water Under the Bridge",
+      "duration_ms": 240439,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "4dpARuHxo51G3z768sgnrY",
+          "name": "Adele"
+        }
+      ],
+      "album": {
+        "id": "6TVfiWmo8KtflUAmkK9gGF",
+        "name": "25",
+        "release_date": "2015-11-20",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048517b9888dc365b8f957c63df14",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2DRMuw0U0QbkVQxWxdJV3M"
+      }
+    },
+    {
+      "id": "1u8c2t2Cy7UBoG4ArRcF5g",
+      "name": "Blank Space",
+      "duration_ms": 231826,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift"
+        }
+      ],
+      "album": {
+        "id": "1yGbNOtRIgdIiGHOEBaZWf",
+        "name": "1989 (Deluxe)",
+        "release_date": "2014-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485152b2a3824413eefe9e33817a",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1u8c2t2Cy7UBoG4ArRcF5g"
+      }
+    },
+    {
+      "id": "5enxwA8aAbwZbf5qCHORXi",
+      "name": "All Too Well (10 Minute Version) (Taylor's Version) (From The Vault)",
+      "duration_ms": 613026,
+      "explicit": true,
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift"
+        }
+      ],
+      "album": {
+        "id": "6kZ42qRrzov54LcAk4onW9",
+        "name": "Red (Taylor's Version)",
+        "release_date": "2021-11-12",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851318443aab3531a0558e79a4d",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5enxwA8aAbwZbf5qCHORXi"
+      }
+    },
+    {
+      "id": "456WNXWhDwYOSf5SpTuqxd",
+      "name": "Dog Days Are Over",
+      "duration_ms": 252818,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1moxjboGR7GNWYIMWsRjgG",
+          "name": "Florence + The Machine"
+        }
+      ],
+      "album": {
+        "id": "1rLLyY5p6HXNl2lKzINWp5",
+        "name": "Lungs (Deluxe Version)",
+        "release_date": "2009",
+        "release_date_precision": "year",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851003f81b1f4246362638e682d",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/456WNXWhDwYOSf5SpTuqxd"
+      }
+    },
+    {
+      "id": "4jbmgIyjGoXjY01XxatOx6",
+      "name": "Dark Horse",
+      "duration_ms": 215672,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        },
+        {
+          "id": "5gCRApTajqwbnHHPbr2Fpi",
+          "name": "Juicy J"
+        }
+      ],
+      "album": {
+        "id": "3jB9yFDwRe3KhtGnHXJntk",
+        "name": "PRISM",
+        "release_date": "2013-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e9a057052d59004caf47e22",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4jbmgIyjGoXjY01XxatOx6"
+      }
+    },
+    {
+      "id": "4tCtwWceOPWzenK2HAIJSb",
+      "name": "Work from Home (feat. Ty Dolla $ign)",
+      "duration_ms": 214477,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1l8Fu6IkuTP0U5QetQJ5Xt",
+          "name": "Fifth Harmony"
+        },
+        {
+          "id": "7c0XG5cIJTrrAgEC3ULPiq",
+          "name": "Ty Dolla $ign"
+        }
+      ],
+      "album": {
+        "id": "0pF0oyuPNdOObniB1Ng0kW",
+        "name": "7/27 (Deluxe)",
+        "release_date": "2016-05-27",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485182db43e5091301205076d6ab",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4tCtwWceOPWzenK2HAIJSb"
+      }
+    },
+    {
+      "id": "6XFvsdR5sHHNy5dOcbz545",
+      "name": "Through The Eyes Of A Child",
+      "duration_ms": 274413,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1WgXqy2Dd70QQOU7Ay074N",
+          "name": "AURORA"
+        }
+      ],
+      "album": {
+        "id": "6YMSXPIHkA2jPIlFHuejXW",
+        "name": "All My Demons Greeting Me As A Friend (Deluxe)",
+        "release_date": "2016-03-11",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851c379325088c2845fe85cd70a",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6XFvsdR5sHHNy5dOcbz545"
+      }
+    },
+    {
+      "id": "0JNdS1n0ifOP25XvhwAMgM",
+      "name": "The Edge Of Glory",
+      "duration_ms": 320586,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        }
+      ],
+      "album": {
+        "id": "2KkMVsxymoNR7hRmBcMttd",
+        "name": "Born This Way",
+        "release_date": "2011-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048514ba15b951a5cff36133ca5bd",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0JNdS1n0ifOP25XvhwAMgM"
+      }
+    },
+    {
+      "id": "1QV6tiMFM6fSOKOGLMHYYg",
+      "name": "Poker Face",
+      "duration_ms": 237200,
+      "explicit": true,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        }
+      ],
+      "album": {
+        "id": "1qwlxZTNLe1jq3b0iidlue",
+        "name": "The Fame",
+        "release_date": "2008-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e691217483df8798445c82e2",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1QV6tiMFM6fSOKOGLMHYYg"
+      }
+    },
+    {
+      "id": "20I6sIOMTCkB6w7ryavxtO",
+      "name": "Call Me Maybe",
+      "duration_ms": 193400,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6sFIWsNpZYqfjUpaCgueju",
+          "name": "Carly Rae Jepsen"
+        }
+      ],
+      "album": {
+        "id": "6SSSF9Y6MiPdQoxqBptrR2",
+        "name": "Kiss",
+        "release_date": "2012-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851d3ee4bf67c2ac2154006ad72",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/20I6sIOMTCkB6w7ryavxtO"
+      }
+    },
+    {
+      "id": "0TvQLMecTE8utzoNmvXRbK",
+      "name": "Bad Blood",
+      "duration_ms": 211933,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift"
+        }
+      ],
+      "album": {
+        "id": "5fy0X0JmZRZnVa2UEicIOl",
+        "name": "1989",
+        "release_date": "2014-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851b7e976d2b35c767f9012cb72",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0TvQLMecTE8utzoNmvXRbK"
+      }
+    },
+    {
+      "id": "27tNWlhdAryQY04Gb2ZhUI",
+      "name": "Roar",
+      "duration_ms": 223546,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "3jB9yFDwRe3KhtGnHXJntk",
+        "name": "PRISM",
+        "release_date": "2013-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e9a057052d59004caf47e22",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/27tNWlhdAryQY04Gb2ZhUI"
+      }
+    },
+    {
+      "id": "2LHNTC9QZxsL3nWpt8iaSR",
+      "name": "Abracadabra",
+      "duration_ms": 223398,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        }
+      ],
+      "album": {
+        "id": "2MHUaRi9OCyTN02SoyRRBJ",
+        "name": "MAYHEM",
+        "release_date": "2025-03-07",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851b0860cf0a98e09663c82290c",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2LHNTC9QZxsL3nWpt8iaSR"
+      }
+    },
+    {
+      "id": "6vc2Jq2vaGu8z326kSrw92",
+      "name": "Your Love Is My Drug",
+      "duration_ms": 187133,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha"
+        }
+      ],
+      "album": {
+        "id": "6fpLLJsDSSAlToEDW2jv4F",
+        "name": "Animal (Expanded Edition)",
+        "release_date": "2010-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485197c7b770b28ffeed164f4d0e",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6vc2Jq2vaGu8z326kSrw92"
+      }
+    },
+    {
+      "id": "7ju97lgwC2rKQ6wwsf9no9",
+      "name": "Rain On Me (with Ariana Grande)",
+      "duration_ms": 182200,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        },
+        {
+          "id": "66CXWjxzNUsdJxJ2JdwvnR",
+          "name": "Ariana Grande"
+        }
+      ],
+      "album": {
+        "id": "05c49JgPmL4Uz2ZeqRx5SP",
+        "name": "Chromatica",
+        "release_date": "2020-05-29",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048516040effba89b9b00a6f6743a",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7ju97lgwC2rKQ6wwsf9no9"
+      }
+    },
+    {
+      "id": "1rIKgCH4H52lrvDcz50hS8",
+      "name": "Lush Life",
+      "duration_ms": 200646,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1Xylc3o4UrD53lo9CvFvVg",
+          "name": "Zara Larsson"
+        }
+      ],
+      "album": {
+        "id": "5YLRVHDVRw3QqWbeTGpC5B",
+        "name": "So Good",
+        "release_date": "2017-03-17",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851401bf6103d4b7f5230a21582",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1rIKgCH4H52lrvDcz50hS8"
+      }
+    },
+    {
+      "id": "3pYDZTJM2tVBUhIRifWVzI",
+      "name": "Blow",
+      "duration_ms": 219973,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha"
+        }
+      ],
+      "album": {
+        "id": "0pGumY11G8OGH05ti6jh23",
+        "name": "Cannibal (Expanded Edition)",
+        "release_date": "2010-11-19",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851d94f03f5cae0ba242a13178b",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/3pYDZTJM2tVBUhIRifWVzI"
+      }
+    },
+    {
+      "id": "0cqRj7pUJDkTCEsJkx8snD",
+      "name": "Shake It Off",
+      "duration_ms": 219200,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift"
+        }
+      ],
+      "album": {
+        "id": "1yGbNOtRIgdIiGHOEBaZWf",
+        "name": "1989 (Deluxe)",
+        "release_date": "2014-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000485152b2a3824413eefe9e33817a",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0cqRj7pUJDkTCEsJkx8snD"
+      }
+    },
+    {
+      "id": "0RJWhctsc1G1Hg3Ov2th7x",
+      "name": "Whenever, Wherever",
+      "duration_ms": 197026,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "0EmeFodog0BfCgMzAIvKQp",
+          "name": "Shakira"
+        }
+      ],
+      "album": {
+        "id": "62F8unRY46ZDR2EE5ag5Z5",
+        "name": "Servicio De Lavandería",
+        "release_date": "2001",
+        "release_date_precision": "year",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048519d68bc56bf51dcb2e4033e36",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0RJWhctsc1G1Hg3Ov2th7x"
+      }
+    },
+    {
+      "id": "0V3wPSX9ygBnCm8psDIegu",
+      "name": "Anti-Hero",
+      "duration_ms": 200690,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "06HL4z0CvFAxyc27GXpf02",
+          "name": "Taylor Swift"
+        }
+      ],
+      "album": {
+        "id": "151w1FgRZfnKZA9FEcg9Z3",
+        "name": "Midnights",
+        "release_date": "2022-10-21",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851bb54dde68cd23e2a268ae0f5",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0V3wPSX9ygBnCm8psDIegu"
+      }
+    },
+    {
+      "id": "0eH2eHURaXUP15D8gQlfjx",
+      "name": "LoveGame",
+      "duration_ms": 216333,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        }
+      ],
+      "album": {
+        "id": "1qwlxZTNLe1jq3b0iidlue",
+        "name": "The Fame",
+        "release_date": "2008-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e691217483df8798445c82e2",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/0eH2eHURaXUP15D8gQlfjx"
+      }
+    },
+    {
+      "id": "1NOZvdCovG42qQV7ftVD5d",
+      "name": "Birthday",
+      "duration_ms": 215042,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "3jB9yFDwRe3KhtGnHXJntk",
+        "name": "PRISM",
+        "release_date": "2013-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e9a057052d59004caf47e22",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1NOZvdCovG42qQV7ftVD5d"
+      }
+    },
+    {
+      "id": "46IZ0fSY2mpAiktS3KOqds",
+      "name": "Easy On Me",
+      "duration_ms": 224694,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "4dpARuHxo51G3z768sgnrY",
+          "name": "Adele"
+        }
+      ],
+      "album": {
+        "id": "21jF5jlMtzo94wbxmJ18aa",
+        "name": "30",
+        "release_date": "2021-11-19",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851c6b577e4c4a6d326354a89f7",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/46IZ0fSY2mpAiktS3KOqds"
+      }
+    },
+    {
+      "id": "4wH4dJgrsxONID6KS2tDQM",
+      "name": "Maneater",
+      "duration_ms": 258893,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "2jw70GZXlAI8QzWeY2bgRc",
+          "name": "Nelly Furtado"
+        }
+      ],
+      "album": {
+        "id": "2yboV2QBcVGEhcRlYuPpDT",
+        "name": "Loose",
+        "release_date": "2006-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a6f439c8957170652f9410e2",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4wH4dJgrsxONID6KS2tDQM"
+      }
+    },
+    {
+      "id": "5G2f63n7IPVPPjfNIGih7Q",
+      "name": "Taste",
+      "duration_ms": 157279,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "74KM79TiuVKeVCqs8QtB0B",
+          "name": "Sabrina Carpenter"
+        }
+      ],
+      "album": {
+        "id": "3iPSVi54hsacKKl1xIR2eH",
+        "name": "Short n' Sweet",
+        "release_date": "2024-08-23",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851fd8d7a8d96871e791cb1f626",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/5G2f63n7IPVPPjfNIGih7Q"
+      }
+    },
+    {
+      "id": "6Knv6wdA0luoMUuuoYi2i1",
+      "name": "My House",
+      "duration_ms": 192190,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "0jnsk9HBra6NMjO2oANoPY",
+          "name": "Flo Rida"
+        }
+      ],
+      "album": {
+        "id": "5lkNnHVlnCCCV304t89wOH",
+        "name": "My House",
+        "release_date": "2015-04-07",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048516ba3d11e51c7df825292307f",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6Knv6wdA0luoMUuuoYi2i1"
+      }
+    },
+    {
+      "id": "6ic8OlLUNEATToEFU3xmaH",
+      "name": "Gimme More",
+      "duration_ms": 251244,
+      "explicit": true,
+      "artists": [
+        {
+          "id": "26dSoYclwsYLMAKD3tpOr4",
+          "name": "Britney Spears"
+        }
+      ],
+      "album": {
+        "id": "1ePkYcH5ZQCb1b4tQeiEDj",
+        "name": "Blackout",
+        "release_date": "2007-10-25",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851d0a8bfe18f25429d76886b1e",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6ic8OlLUNEATToEFU3xmaH"
+      }
+    },
+    {
+      "id": "6r2BECwMgEoRb5yLfp0Hca",
+      "name": "Born This Way",
+      "duration_ms": 260252,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "1HY2Jd0NmPuamShAr6KMms",
+          "name": "Lady Gaga"
+        }
+      ],
+      "album": {
+        "id": "5maeycU97NHBgwRr2h2A4O",
+        "name": "Born This Way (Special Edition)",
+        "release_date": "2011-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851a47c0e156ea3cebe37fdcab8",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6r2BECwMgEoRb5yLfp0Hca"
+      }
+    },
+    {
+      "id": "7EQGXaVSyEDsCWKmUcfpLk",
+      "name": "Die Young",
+      "duration_ms": 211920,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6LqNN22kT3074XbTVUrhzX",
+          "name": "Kesha"
+        }
+      ],
+      "album": {
+        "id": "5ZQB1ZQ2Yx9YT3nZlR2Pgu",
+        "name": "Warrior (Expanded Edition)",
+        "release_date": "2012-11-30",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851edcab0fe7cf29d17751dad18",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7EQGXaVSyEDsCWKmUcfpLk"
+      }
+    },
+    {
+      "id": "7j5TIXPi0cCbSSqItmbyZy",
+      "name": "Vogue",
+      "duration_ms": 317080,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6tbjWDEIzxoDsBA1FuhfPW",
+          "name": "Madonna"
+        }
+      ],
+      "album": {
+        "id": "5MzwGwnO9gkh0z6Nl4FF8h",
+        "name": "The Immaculate Collection",
+        "release_date": "1990-11-09",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e275f1fbda1c7bc82f9c386b",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/7j5TIXPi0cCbSSqItmbyZy"
+      }
+    },
+    {
+      "id": "009ImBOrIUlWgla8U05RAC",
+      "name": "Unconditionally",
+      "duration_ms": 228878,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "6jJ0s89eD6GaHleKKya26X",
+          "name": "Katy Perry"
+        }
+      ],
+      "album": {
+        "id": "3jB9yFDwRe3KhtGnHXJntk",
+        "name": "PRISM",
+        "release_date": "2013-01-01",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048511e9a057052d59004caf47e22",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/009ImBOrIUlWgla8U05RAC"
+      }
+    },
+    {
+      "id": "00Mb3DuaIH1kjrwOku9CGU",
+      "name": "Sk8er Boi",
+      "duration_ms": 204000,
+      "explicit": false,
+      "artists": [
+        {
+          "id": "0p4nmQO2msCgU4IF37Wi3j",
+          "name": "Avril Lavigne"
+        }
+      ],
+      "album": {
+        "id": "3zXjR3y2dUWklKmmp6lEhy",
+        "name": "Let Go",
+        "release_date": "2002-06-04",
+        "release_date_precision": "day",
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851f7ec724fbf97a30869d06240",
+            "width": 64
+          }
+        ]
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/00Mb3DuaIH1kjrwOku9CGU"
+      }
+    }
+  ],
+  "limit": 50,
+  "total": 465
+}

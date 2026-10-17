@@ -1,0 +1,1565 @@
+{
+  "items": [
+    {
+      "played_at": "2026-10-17T19:38:03.744Z",
+      "track": {
+        "id": "1R0a2iXumgCiFb7HEZ7gUE",
+        "name": "Don’t Blame Me",
+        "duration_ms": 236413,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift"
+          }
+        ],
+        "album": {
+          "id": "6DEjYFkNZh67HP7R9PSZvv",
+          "name": "reputation",
+          "release_date": "2017-11-10",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851da5d5aeeabacacc1263c0f4b",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1R0a2iXumgCiFb7HEZ7gUE"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T19:34:06.858Z",
+      "track": {
+        "id": "5JLv62qFIS1DR3zGEcApRt",
+        "name": "Wide Awake",
+        "duration_ms": 220946,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          }
+        ],
+        "album": {
+          "id": "5BvgP623rtvlc0HDcpzquz",
+          "name": "Teenage Dream: The Complete Confection",
+          "release_date": "2012-03-12",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851937af329667311f4b2831616",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5JLv62qFIS1DR3zGEcApRt"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T19:30:25.396Z",
+      "track": {
+        "id": "4z8ssgZfs5TzKiO8HaGWXO",
+        "name": "E.T.",
+        "duration_ms": 206373,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          }
+        ],
+        "album": {
+          "id": "5BvgP623rtvlc0HDcpzquz",
+          "name": "Teenage Dream: The Complete Confection",
+          "release_date": "2012-03-12",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851937af329667311f4b2831616",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4z8ssgZfs5TzKiO8HaGWXO"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T19:24:02.296Z",
+      "track": {
+        "id": "53jnnqFSRGMDB9ADrNriCA",
+        "name": "Bloody Mary",
+        "duration_ms": 244760,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga"
+          }
+        ],
+        "album": {
+          "id": "6LY3AerY6KNGOPsNPL63Kk",
+          "name": "Born This Way (International Special Edition Version)",
+          "release_date": "2011-05-23",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851a5d31644260279be8d0c46c0",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/53jnnqFSRGMDB9ADrNriCA"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T19:19:57.053Z",
+      "track": {
+        "id": "6xsEAm6w9oMQYYg3jkEkMT",
+        "name": "Bad Blood",
+        "duration_ms": 200106,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift"
+          },
+          {
+            "id": "2YZyLoL8N0Wb9xBt1NhZWg",
+            "name": "Kendrick Lamar"
+          }
+        ],
+        "album": {
+          "id": "1Tv3rrFNdXGtTeP1plX2xE",
+          "name": "Bad Blood",
+          "release_date": "2015-05-17",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048517941dc6a3a023016acbe3d06",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6xsEAm6w9oMQYYg3jkEkMT"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T19:16:36.431Z",
+      "track": {
+        "id": "78qd8dvwea0Gosb6Fe6j3k",
+        "name": "Boss Bitch",
+        "duration_ms": 134239,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "5cj0lLjcoR7YOSnhnX0Po5",
+            "name": "Doja Cat"
+          }
+        ],
+        "album": {
+          "id": "4pmyFpGicLLIgNPc1TQXKc",
+          "name": "Boss Bitch",
+          "release_date": "2020-01-23",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851a36907c0781897feae72ba7f",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/78qd8dvwea0Gosb6Fe6j3k"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T19:13:37.171Z",
+      "track": {
+        "id": "2zOu7jpi6s33p7aEuFDCHh",
+        "name": "Diva",
+        "duration_ms": 200613,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6vWDO969PvNqNYHIOW5v0m",
+            "name": "Beyoncé"
+          }
+        ],
+        "album": {
+          "id": "20E3PwDg1jaDdK9K565luD",
+          "name": "I AM...SASHA FIERCE",
+          "release_date": "2008-11-12",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048512fd16e69054586f25be54f49",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2zOu7jpi6s33p7aEuFDCHh"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T19:10:16.070Z",
+      "track": {
+        "id": "4Ouhoi2lAhrLJKFzUqEzwl",
+        "name": "Born To Die",
+        "duration_ms": 285400,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "00FQb4jTyendYWaN8pK0wa",
+            "name": "Lana Del Rey"
+          }
+        ],
+        "album": {
+          "id": "5VoeRuTrGhTbKelUfwymwu",
+          "name": "Born To Die - The Paradise Edition",
+          "release_date": "2012-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851ebc8cfac8b586bc475b04918",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4Ouhoi2lAhrLJKFzUqEzwl"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T18:50:59.797Z",
+      "track": {
+        "id": "1QV6tiMFM6fSOKOGLMHYYg",
+        "name": "Poker Face",
+        "duration_ms": 237200,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga"
+          }
+        ],
+        "album": {
+          "id": "1qwlxZTNLe1jq3b0iidlue",
+          "name": "The Fame",
+          "release_date": "2008-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851e691217483df8798445c82e2",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1QV6tiMFM6fSOKOGLMHYYg"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:42:47.859Z",
+      "track": {
+        "id": "6JY1IdkZGeIcPegKxjSKeb",
+        "name": "Since U Been Gone",
+        "duration_ms": 188960,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "3BmGtnKgCSGYIUhmivXKWX",
+            "name": "Kelly Clarkson"
+          }
+        ],
+        "album": {
+          "id": "20jYcJane0oI7VoMNoEOJU",
+          "name": "Breakaway",
+          "release_date": "2004",
+          "release_date_precision": "year",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851158c72ad0003cb37ca0c9eff",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6JY1IdkZGeIcPegKxjSKeb"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:39:38.401Z",
+      "track": {
+        "id": "7zIIyVBJvbOrJlCuj7t24z",
+        "name": "E.T.",
+        "duration_ms": 206373,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          }
+        ],
+        "album": {
+          "id": "2UG6T6f0Qc9SaBCIcaviLM",
+          "name": "Teenage Dream",
+          "release_date": "2010-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048511d955011a3ed477dc77865ad",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7zIIyVBJvbOrJlCuj7t24z"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:36:11.499Z",
+      "track": {
+        "id": "4QNpBfC0zvjKqPJcyqBy9W",
+        "name": "Give Me Everything (feat. Nayer)",
+        "duration_ms": 252306,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "0TnOYISbd1XYRBk9myaseg",
+            "name": "Pitbull"
+          },
+          {
+            "id": "4D75GcNG95ebPtNvoNVXhz",
+            "name": "AFROJACK"
+          },
+          {
+            "id": "21E3waRsmPlU7jZsS13rcj",
+            "name": "Ne-Yo"
+          },
+          {
+            "id": "1ruutHJcECI7cos2n5TqpO",
+            "name": "Nayer"
+          }
+        ],
+        "album": {
+          "id": "4rG0MhkU6UojACJxkMHIXB",
+          "name": "Planet Pit (Deluxe Version)",
+          "release_date": "2011-06-17",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048511dc7483a9fcfce54822a2f19",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4QNpBfC0zvjKqPJcyqBy9W"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:31:58.703Z",
+      "track": {
+        "id": "7ySUcLPVX7KudhnmNcgY2D",
+        "name": "S&M",
+        "duration_ms": 243600,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "5pKCCKE2ajJHZ9KAiaK11H",
+            "name": "Rihanna"
+          }
+        ],
+        "album": {
+          "id": "5QG3tjE5L9F6O2vCAPph38",
+          "name": "Loud",
+          "release_date": "2010-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485131548865f7c729290b96c794",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ySUcLPVX7KudhnmNcgY2D"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:27:54.593Z",
+      "track": {
+        "id": "3sP3c86WFjOzHHnbhhZcLA",
+        "name": "Give Your Heart a Break",
+        "duration_ms": 205346,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6S2OmqARrzebs0tKUEyXyp",
+            "name": "Demi Lovato"
+          }
+        ],
+        "album": {
+          "id": "1ypH0eU9RcE6wngSGSqmeY",
+          "name": "Unbroken",
+          "release_date": "2011-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485183fc43cfc25d836e17f8cc30",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3sP3c86WFjOzHHnbhhZcLA"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:24:28.797Z",
+      "track": {
+        "id": "7ju97lgwC2rKQ6wwsf9no9",
+        "name": "Rain On Me (with Ariana Grande)",
+        "duration_ms": 182200,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga"
+          },
+          {
+            "id": "66CXWjxzNUsdJxJ2JdwvnR",
+            "name": "Ariana Grande"
+          }
+        ],
+        "album": {
+          "id": "05c49JgPmL4Uz2ZeqRx5SP",
+          "name": "Chromatica",
+          "release_date": "2020-05-29",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048516040effba89b9b00a6f6743a",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7ju97lgwC2rKQ6wwsf9no9"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:21:26.106Z",
+      "track": {
+        "id": "72jCZdH0Lhg93z6Z4hBjgj",
+        "name": "I Knew You Were Trouble.",
+        "duration_ms": 217973,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift"
+          }
+        ],
+        "album": {
+          "id": "1EoDsNmgTLtmwe1BDAVxV5",
+          "name": "Red",
+          "release_date": "2012-10-22",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485196384c98ac4f3e7c2440f5b5",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/72jCZdH0Lhg93z6Z4hBjgj"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:17:47.599Z",
+      "track": {
+        "id": "3BLQrC76YB29r1Z5hNJbti",
+        "name": "4 Minutes (feat. Justin Timberlake & Timbaland)",
+        "duration_ms": 189693,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6tbjWDEIzxoDsBA1FuhfPW",
+            "name": "Madonna"
+          },
+          {
+            "id": "31TPClRtHm23RisEBtV3X7",
+            "name": "Justin Timberlake"
+          },
+          {
+            "id": "5Y5TRrQiqgUO4S36tzjIRZ",
+            "name": "Timbaland"
+          }
+        ],
+        "album": {
+          "id": "6U4hLkY2ITGsSQ9gekaEYt",
+          "name": "4 Minutes (feat. Justin Timberlake and Timbaland) [Remixes]",
+          "release_date": "2008-04-11",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851e99de100cbe9873b7837dba3",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3BLQrC76YB29r1Z5hNJbti"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:14:37.407Z",
+      "track": {
+        "id": "1TEjSXPdAakDotj2Wji3PU",
+        "name": "Hot N Cold",
+        "duration_ms": 220226,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          }
+        ],
+        "album": {
+          "id": "7rSjuY09uCzvMY4TlFsBD8",
+          "name": "One Of The Boys",
+          "release_date": "2008-06-17",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851df35c65d88dfacb5798f7291",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1TEjSXPdAakDotj2Wji3PU"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:10:56.653Z",
+      "track": {
+        "id": "3NuK5xMlSlB6K2Qp16zf3h",
+        "name": "Solo (feat. Demi Lovato)",
+        "duration_ms": 222706,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6MDME20pz9RveH9rEXvrOM",
+            "name": "Clean Bandit"
+          },
+          {
+            "id": "6S2OmqARrzebs0tKUEyXyp",
+            "name": "Demi Lovato"
+          }
+        ],
+        "album": {
+          "id": "1MvF4ulZKH7SaDQs9rE5nc",
+          "name": "What Is Love? (Deluxe Edition)",
+          "release_date": "2018-11-30",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048515c66e925d8fe4c92ebfb49ed",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3NuK5xMlSlB6K2Qp16zf3h"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:07:13.477Z",
+      "track": {
+        "id": "0JiY190vktuhSGN6aqJdrt",
+        "name": "So What",
+        "duration_ms": 215160,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "1KCSPY1glIKqW2TotWuXOR",
+            "name": "P!nk"
+          }
+        ],
+        "album": {
+          "id": "1LOJfNDxQhbpssKx7oM7at",
+          "name": "Funhouse (Expanded Edition)",
+          "release_date": "2008-10-24",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048515a45d5041e4ffcb9f756f740",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/0JiY190vktuhSGN6aqJdrt"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:03:37.804Z",
+      "track": {
+        "id": "6ss2vUwrV64xAVE4fXZMIh",
+        "name": "I Really Like You",
+        "duration_ms": 204773,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6sFIWsNpZYqfjUpaCgueju",
+            "name": "Carly Rae Jepsen"
+          }
+        ],
+        "album": {
+          "id": "0tc6zo8FGuGegfZIicLEwV",
+          "name": "Emotion",
+          "release_date": "2015-08-21",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851554f127136aa7945ce442617",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ss2vUwrV64xAVE4fXZMIh"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T17:00:12.602Z",
+      "track": {
+        "id": "7EQGXaVSyEDsCWKmUcfpLk",
+        "name": "Die Young",
+        "duration_ms": 211920,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6LqNN22kT3074XbTVUrhzX",
+            "name": "Kesha"
+          }
+        ],
+        "album": {
+          "id": "5ZQB1ZQ2Yx9YT3nZlR2Pgu",
+          "name": "Warrior (Expanded Edition)",
+          "release_date": "2012-11-30",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851edcab0fe7cf29d17751dad18",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7EQGXaVSyEDsCWKmUcfpLk"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T16:56:40.172Z",
+      "track": {
+        "id": "7xoUc6faLbCqZO6fQEYprd",
+        "name": "One Last Time",
+        "duration_ms": 197266,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "66CXWjxzNUsdJxJ2JdwvnR",
+            "name": "Ariana Grande"
+          }
+        ],
+        "album": {
+          "id": "6EVYTRG1drKdO8OnIQBeEj",
+          "name": "My Everything (Deluxe)",
+          "release_date": "2014-08-22",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851deec12a28d1e336c5052e9aa",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7xoUc6faLbCqZO6fQEYprd"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T16:53:22.377Z",
+      "track": {
+        "id": "5WQQIDU3HRaMyPkob8mpFb",
+        "name": "Where Have You Been",
+        "duration_ms": 242680,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "5pKCCKE2ajJHZ9KAiaK11H",
+            "name": "Rihanna"
+          }
+        ],
+        "album": {
+          "id": "2g1EakEaW7fPTZC6vBmBCn",
+          "name": "Talk That Talk",
+          "release_date": "2011-11-18",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851bef074de9ca825bddaeb9f46",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/5WQQIDU3HRaMyPkob8mpFb"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T16:49:19.203Z",
+      "track": {
+        "id": "009ImBOrIUlWgla8U05RAC",
+        "name": "Unconditionally",
+        "duration_ms": 228878,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          }
+        ],
+        "album": {
+          "id": "3jB9yFDwRe3KhtGnHXJntk",
+          "name": "PRISM",
+          "release_date": "2013-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048511e9a057052d59004caf47e22",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/009ImBOrIUlWgla8U05RAC"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T16:45:29.799Z",
+      "track": {
+        "id": "02XnQdf7sipaKBBHixz3Zp",
+        "name": "Paparazzi",
+        "duration_ms": 208306,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga"
+          }
+        ],
+        "album": {
+          "id": "1qwlxZTNLe1jq3b0iidlue",
+          "name": "The Fame",
+          "release_date": "2008-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851e691217483df8798445c82e2",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/02XnQdf7sipaKBBHixz3Zp"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T16:42:01.004Z",
+      "track": {
+        "id": "3fVnlF4pGqWI9flVENcT28",
+        "name": "Wildest Dreams",
+        "duration_ms": 220440,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift"
+          }
+        ],
+        "album": {
+          "id": "5fy0X0JmZRZnVa2UEicIOl",
+          "name": "1989",
+          "release_date": "2014-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851b7e976d2b35c767f9012cb72",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3fVnlF4pGqWI9flVENcT28"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T15:50:40.403Z",
+      "track": {
+        "id": "1nZzRJbFvCEct3uzu04ZoL",
+        "name": "Part Of Me",
+        "duration_ms": 216160,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          }
+        ],
+        "album": {
+          "id": "5BvgP623rtvlc0HDcpzquz",
+          "name": "Teenage Dream: The Complete Confection",
+          "release_date": "2012-03-12",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851937af329667311f4b2831616",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1nZzRJbFvCEct3uzu04ZoL"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T15:47:03.760Z",
+      "track": {
+        "id": "1uXbwHHfgsXcUKfSZw5ZJ0",
+        "name": "Run the World (Girls)",
+        "duration_ms": 236093,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6vWDO969PvNqNYHIOW5v0m",
+            "name": "Beyoncé"
+          }
+        ],
+        "album": {
+          "id": "1gIC63gC3B7o7FfpPACZQJ",
+          "name": "4",
+          "release_date": "2011-06-24",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851ff5429125128b43572dbdccd",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1uXbwHHfgsXcUKfSZw5ZJ0"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T15:39:25.407Z",
+      "track": {
+        "id": "27SdWb2rFzO6GWiYDBTD9j",
+        "name": "Cheap Thrills",
+        "duration_ms": 211666,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "5WUlDfRSoLAfcVSX1WnrxN",
+            "name": "Sia"
+          }
+        ],
+        "album": {
+          "id": "77jAfTh3KH9K2reMOmTgOh",
+          "name": "This Is Acting",
+          "release_date": "2016-01-29",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851b9bea8700ca3c305eb9569a3",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/27SdWb2rFzO6GWiYDBTD9j"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T14:49:53.426Z",
+      "track": {
+        "id": "27SdWb2rFzO6GWiYDBTD9j",
+        "name": "Cheap Thrills",
+        "duration_ms": 211666,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "5WUlDfRSoLAfcVSX1WnrxN",
+            "name": "Sia"
+          }
+        ],
+        "album": {
+          "id": "77jAfTh3KH9K2reMOmTgOh",
+          "name": "This Is Acting",
+          "release_date": "2016-01-29",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851b9bea8700ca3c305eb9569a3",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/27SdWb2rFzO6GWiYDBTD9j"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:45:10.260Z",
+      "track": {
+        "id": "6qn9YLKt13AGvpq9jfO8py",
+        "name": "We Found Love",
+        "duration_ms": 215226,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "5pKCCKE2ajJHZ9KAiaK11H",
+            "name": "Rihanna"
+          },
+          {
+            "id": "7CajNmpbOovFoOoasH2HaY",
+            "name": "Calvin Harris"
+          }
+        ],
+        "album": {
+          "id": "2g1EakEaW7fPTZC6vBmBCn",
+          "name": "Talk That Talk",
+          "release_date": "2011-11-18",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851bef074de9ca825bddaeb9f46",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6qn9YLKt13AGvpq9jfO8py"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:41:34.598Z",
+      "track": {
+        "id": "3E7dfMvvCLUddWissuqMwr",
+        "name": "Party In The U.S.A.",
+        "duration_ms": 202066,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "5YGY8feqx7naU7z4HrwZM6",
+            "name": "Miley Cyrus"
+          }
+        ],
+        "album": {
+          "id": "0IuHVgAvbNDJnJepuSZ8Oz",
+          "name": "The Time Of Our Lives (International Version)",
+          "release_date": "2009-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048514ea6653890e297d53e93e3e0",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3E7dfMvvCLUddWissuqMwr"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:38:11.993Z",
+      "track": {
+        "id": "2oxtQ84p1j5GmyzmD50Lq0",
+        "name": "Rich Girl",
+        "duration_ms": 236213,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "4yiQZ8tQPux8cPriYMWUFP",
+            "name": "Gwen Stefani"
+          },
+          {
+            "id": "4d3yvTptO48nOYTPBcPFZC",
+            "name": "Eve"
+          }
+        ],
+        "album": {
+          "id": "34y7m68F7rN9ou6m5GWohR",
+          "name": "Love. Angel. Music. Baby.",
+          "release_date": "2004-11-12",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851f049fc9322f0c93646cdcc77",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2oxtQ84p1j5GmyzmD50Lq0"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:34:15.292Z",
+      "track": {
+        "id": "10nqz67NQWWa7XPq7ycihi",
+        "name": "Welcome To New York",
+        "duration_ms": 212600,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift"
+          }
+        ],
+        "album": {
+          "id": "5fy0X0JmZRZnVa2UEicIOl",
+          "name": "1989",
+          "release_date": "2014-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851b7e976d2b35c767f9012cb72",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/10nqz67NQWWa7XPq7ycihi"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:30:42.204Z",
+      "track": {
+        "id": "4rHmKlFRiFzabiVO6e9w2e",
+        "name": "Bon Appétit",
+        "duration_ms": 227813,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          },
+          {
+            "id": "6oMuImdp5ZcFhWP0ESe6mG",
+            "name": "Migos"
+          }
+        ],
+        "album": {
+          "id": "0UlbGi4oAth8s6rwaGSU8Z",
+          "name": "Witness (Deluxe)",
+          "release_date": "2017-06-09",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851cce6bab1f59b165133175d88",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4rHmKlFRiFzabiVO6e9w2e"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:26:53.893Z",
+      "track": {
+        "id": "4wH4dJgrsxONID6KS2tDQM",
+        "name": "Maneater",
+        "duration_ms": 258893,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "2jw70GZXlAI8QzWeY2bgRc",
+            "name": "Nelly Furtado"
+          }
+        ],
+        "album": {
+          "id": "2yboV2QBcVGEhcRlYuPpDT",
+          "name": "Loose",
+          "release_date": "2006-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851a6f439c8957170652f9410e2",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4wH4dJgrsxONID6KS2tDQM"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:22:34.462Z",
+      "track": {
+        "id": "6vc2Jq2vaGu8z326kSrw92",
+        "name": "Your Love Is My Drug",
+        "duration_ms": 187133,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6LqNN22kT3074XbTVUrhzX",
+            "name": "Kesha"
+          }
+        ],
+        "album": {
+          "id": "6fpLLJsDSSAlToEDW2jv4F",
+          "name": "Animal (Expanded Edition)",
+          "release_date": "2010-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485197c7b770b28ffeed164f4d0e",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6vc2Jq2vaGu8z326kSrw92"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:19:26.843Z",
+      "track": {
+        "id": "4TCL0qqKyqsMZml0G3M9IM",
+        "name": "Telephone",
+        "duration_ms": 220640,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "1HY2Jd0NmPuamShAr6KMms",
+            "name": "Lady Gaga"
+          },
+          {
+            "id": "6vWDO969PvNqNYHIOW5v0m",
+            "name": "Beyoncé"
+          }
+        ],
+        "album": {
+          "id": "6rePArBMb5nLWEaY9aQqL4",
+          "name": "The Fame Monster (Deluxe Edition)",
+          "release_date": "2009-11-05",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048515c9890c0456a3719eeecd8aa",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4TCL0qqKyqsMZml0G3M9IM"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:15:45.707Z",
+      "track": {
+        "id": "2v7ywbUzCgcVohHaKUcacV",
+        "name": "Like a Prayer",
+        "duration_ms": 340866,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6tbjWDEIzxoDsBA1FuhfPW",
+            "name": "Madonna"
+          }
+        ],
+        "album": {
+          "id": "48AGkmM7iO4jrELRnNZGPV",
+          "name": "Like a Prayer",
+          "release_date": "1989-03-21",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851744ce5f9db16330eb4027f26",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2v7ywbUzCgcVohHaKUcacV"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:10:04.369Z",
+      "track": {
+        "id": "12KUFSHFgT0XCoiSlvdQi4",
+        "name": "Break Free",
+        "duration_ms": 214840,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "66CXWjxzNUsdJxJ2JdwvnR",
+            "name": "Ariana Grande"
+          },
+          {
+            "id": "2qxJFvFYMEDqd7ui6kSAcq",
+            "name": "Zedd"
+          }
+        ],
+        "album": {
+          "id": "6EVYTRG1drKdO8OnIQBeEj",
+          "name": "My Everything (Deluxe)",
+          "release_date": "2014-08-22",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851deec12a28d1e336c5052e9aa",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/12KUFSHFgT0XCoiSlvdQi4"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:06:28.996Z",
+      "track": {
+        "id": "4E5P1XyAFtrjpiIxkydly4",
+        "name": "Replay",
+        "duration_ms": 182306,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "5tKXB9uuebKE34yowVaU3C",
+            "name": "Iyaz"
+          }
+        ],
+        "album": {
+          "id": "44hyrGuZKAvITbmrlhryf8",
+          "name": "Replay",
+          "release_date": "2009-08-18",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851ae7012fce99c2b2345b54f30",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/4E5P1XyAFtrjpiIxkydly4"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T13:03:26.203Z",
+      "track": {
+        "id": "1htQDV8JxSuXG2QsNj5ttr",
+        "name": "Last Friday Night (T.G.I.F.)",
+        "duration_ms": 230733,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          }
+        ],
+        "album": {
+          "id": "2UG6T6f0Qc9SaBCIcaviLM",
+          "name": "Teenage Dream",
+          "release_date": "2010-01-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048511d955011a3ed477dc77865ad",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1htQDV8JxSuXG2QsNj5ttr"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T12:54:40.551Z",
+      "track": {
+        "id": "7K3Lc3TfSR14aTOjIH7TUj",
+        "name": "Just The Way You Are",
+        "duration_ms": 210070,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "5AvCP5qzxTmk4cQmh0SUEw",
+            "name": "Milky"
+          }
+        ],
+        "album": {
+          "id": "1fN8LTM10sYFZl5BCzIPlj",
+          "name": "Just The Way You Are",
+          "release_date": "2002-10-04",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048515054a99f9ce5b356db8d5852",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/7K3Lc3TfSR14aTOjIH7TUj"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T12:51:09.998Z",
+      "track": {
+        "id": "3f7gYMirBEKuc57218BjOY",
+        "name": "California Gurls",
+        "duration_ms": 234653,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "6jJ0s89eD6GaHleKKya26X",
+            "name": "Katy Perry"
+          },
+          {
+            "id": "7hJcb9fa4alzcOq3EaNPoG",
+            "name": "Snoop Dogg"
+          }
+        ],
+        "album": {
+          "id": "06SY6Ke6mXzZHhURLVU57R",
+          "name": "Teenage Dream",
+          "release_date": "2010-08-24",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851f619042d5f6b2149a4f5e0ca",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/3f7gYMirBEKuc57218BjOY"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T12:46:48.605Z",
+      "track": {
+        "id": "6KI1ZpZWYAJLvmVhCJz65G",
+        "name": "You Don't Own Me (feat. G-Eazy)",
+        "duration_ms": 201489,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "6y5amJcTjeDgLXIjtQLMst",
+            "name": "SAYGRACE"
+          },
+          {
+            "id": "02kJSzxNuaWGqwubyUba0Z",
+            "name": "G-Eazy"
+          }
+        ],
+        "album": {
+          "id": "2AUhyBQANk5FKHD6WCbxja",
+          "name": "FMA",
+          "release_date": "2016-07-01",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048512da2cda6fe3a9fa9ab49b252",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6KI1ZpZWYAJLvmVhCJz65G"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T12:43:26.601Z",
+      "track": {
+        "id": "6ic8OlLUNEATToEFU3xmaH",
+        "name": "Gimme More",
+        "duration_ms": 251244,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "26dSoYclwsYLMAKD3tpOr4",
+            "name": "Britney Spears"
+          }
+        ],
+        "album": {
+          "id": "1ePkYcH5ZQCb1b4tQeiEDj",
+          "name": "Blackout",
+          "release_date": "2007-10-25",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851d0a8bfe18f25429d76886b1e",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ic8OlLUNEATToEFU3xmaH"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T11:34:00.704Z",
+      "track": {
+        "id": "2mdEsXPu8ZmkHRRtAdC09e",
+        "name": "Cinnamon Girl",
+        "duration_ms": 300683,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "00FQb4jTyendYWaN8pK0wa",
+            "name": "Lana Del Rey"
+          }
+        ],
+        "album": {
+          "id": "5XpEKORZ4y6OrCZSKsi46A",
+          "name": "Norman Fucking Rockwell!",
+          "release_date": "2019-08-30",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d00004851879e9318cb9f4e05ee552ac9",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/2mdEsXPu8ZmkHRRtAdC09e"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T11:28:59.591Z",
+      "track": {
+        "id": "6ocbgoVGwYJhOv1GgI9NsF",
+        "name": "7 rings",
+        "duration_ms": 178626,
+        "explicit": true,
+        "artists": [
+          {
+            "id": "66CXWjxzNUsdJxJ2JdwvnR",
+            "name": "Ariana Grande"
+          }
+        ],
+        "album": {
+          "id": "2fYhqwDWXjbpjaIJPEfKFw",
+          "name": "thank u, next",
+          "release_date": "2019-02-08",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d0000485156ac7b86e090f307e218e9c8",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/6ocbgoVGwYJhOv1GgI9NsF"
+        }
+      }
+    },
+    {
+      "played_at": "2026-10-17T11:26:00.400Z",
+      "track": {
+        "id": "1K39ty6o1sHwwlZwO6a7wK",
+        "name": "Wildest Dreams (Taylor's Version)",
+        "duration_ms": 220433,
+        "explicit": false,
+        "artists": [
+          {
+            "id": "06HL4z0CvFAxyc27GXpf02",
+            "name": "Taylor Swift"
+          }
+        ],
+        "album": {
+          "id": "64LU4c1nfjz1t4VnGhagcg",
+          "name": "1989 (Taylor's Version)",
+          "release_date": "2023-10-26",
+          "release_date_precision": "day",
+          "images": [
+            {
+              "url": "https://i.scdn.co/image/ab67616d000048514110bfab1185fdfc9dfc2cf0",
+              "width": 64
+            }
+          ]
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/track/1K39ty6o1sHwwlZwO6a7wK"
+        }
+      }
+    }
+  ],
+  "limit": 50
+}
