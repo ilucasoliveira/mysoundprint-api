@@ -5,8 +5,15 @@ statistics: how your top artists and tracks shift across time ranges, how
 concentrated your listening is, which eras of music you actually play, and
 when you play them.
 
-> **Work in progress.** Authentication, token refresh, the cached Spotify
-> client and five statistics endpoints are done. Deployment is next.
+**Live:** [mysoundprint-api.onrender.com](https://mysoundprint-api.onrender.com)
+· [interactive docs](https://mysoundprint-api.onrender.com/docs)
+· [try it without an account](https://mysoundprint-api.onrender.com/demo/concentration)
+
+> The free Render instance sleeps after 15 minutes of inactivity, so the
+> first request can take up to a minute. Everything after that is fast.
+
+> **Work in progress.** The API is deployed and complete. A front end is
+> next.
 
 ## How the authentication works
 
@@ -197,7 +204,7 @@ tests run without any infrastructure.
 - [x] Spotify API client with Redis caching and 429 handling
 - [x] Statistics endpoints
 - [x] Demo mode and tests
-- [ ] Deployment
+- [x] Deployment
 - [ ] Scheduled history collection
 
 ## License
