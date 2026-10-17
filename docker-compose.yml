@@ -1,11 +1,15 @@
 services:
   db:
-    image: postgres:18
+    image: postgres:18-alpine
     container_name: mysoundprint-db
     restart: unless-stopped
     ports:
       - "5433:5432"
     volumes:
+      # Postgres 18 moved PGDATA to /var/lib/postgresql/18/docker, so the
+      # parent directory is what has to be persisted. Mounting
+      # /var/lib/postgresql/data, correct up to Postgres 17, silently
+      # persists nothing here.
       - pgdata:/var/lib/postgresql
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
@@ -16,12 +20,43 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+
   redis:
     image: redis:8-alpine
     container_name: mysoundprint-redis
     restart: unless-stopped
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    container_name: mysoundprint-api
+    restart: unless-stopped
+    profiles: ["full"]
+    ports:
+      - "8000:8000"
+    environment:
+      # Inside the compose network the services answer by name, not on
+      # 127.0.0.1, which points at the container itself.
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+      - REDIS_URL=redis://redis:6379/0
+      - SPOTIFY_CLIENT_ID=${SPOTIFY_CLIENT_ID}
+      - SPOTIFY_CLIENT_SECRET=${SPOTIFY_CLIENT_SECRET}
+      - SPOTIFY_REDIRECT_URI=${SPOTIFY_REDIRECT_URI}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "alembic upgrade head &&
+             uvicorn app.main:app --host 0.0.0.0 --port 8000"
 
 volumes:
   pgdata:
