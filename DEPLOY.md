@@ -14,6 +14,11 @@ Two things to change in it:
 - the driver prefix becomes `postgresql+asyncpg://`
 - use the **transaction pooler** host (port `6543`), not the direct one
 
+The transaction pooler resolves over IPv6 by default. On an IPv4-only
+network the connection fails with a name resolution error that looks like the
+host is wrong. The fallback is the **session pooler**, which Supabase offers
+for exactly that case.
+
 Then append `?prepared_statement_cache_size=0` to the URI. This is not
 optional: `asyncpg` prepares statements by name, the transaction pooler hands
 out a different backend connection per transaction, and the prepared statement
@@ -37,7 +42,10 @@ a connection error that looks like the server is down.
 New → Web Service → connect the GitHub repository.
 
 - **Runtime**: Docker (the repository has a Dockerfile)
-- **Region**: Oregon, same as the free Postgres tier you may add later
+- **Region**: pick the one closest to the Supabase region. With the
+  database in `ca-central-1` (Montreal), Ohio is the nearest Render
+  option. What matters is the distance between the API and the database,
+  not between you and either of them.
 - **Instance type**: Free
 
 Environment variables:
