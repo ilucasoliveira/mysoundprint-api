@@ -2,10 +2,11 @@
 
 A FastAPI backend that turns your Spotify listening history into personal
 statistics: how your top artists and tracks shift across time ranges, how
-concentrated your listening is, and which eras of music you actually play.
+concentrated your listening is, which eras of music you actually play, and
+when you play them.
 
-> **Work in progress.** Authentication, token refresh and the cached Spotify
-> client are done. Statistics endpoints are being built.
+> **Work in progress.** Authentication, token refresh, the cached Spotify
+> client and five statistics endpoints are done. Deployment is next.
 
 ## How the authentication works
 
@@ -24,20 +25,38 @@ an auth library, so every step is explicit:
 5. The `code` is exchanged for an `access_token` and a `refresh_token` in a
    server to server POST, authenticated with HTTP Basic. The client secret
    never touches the browser.
+6. The API issues its own session JWT. Spotify's tokens stay in the
+   database and are never handed to the client.
 
 The `code` is deliberately useless on its own: without the client secret it
-cannot be exchanged for anything, which is the reason the flow does not
-return the token directly in the redirect URL.
+cannot be exchanged for anything, which is why the flow does not return the
+token directly in the redirect URL.
 
 ## Stack
 
 - **FastAPI** + Uvicorn
-- **Redis** for short lived OAuth state
-- **PostgreSQL** for users and tokens
+- **PostgreSQL** for users, tokens and listening history
+- **Redis** for OAuth state and response caching
+- **SQLAlchemy 2.0** (async) + **Alembic** for migrations
 - **httpx** for async calls to the Spotify Web API
+- **PyJWT** for session tokens
 - **Pydantic Settings** for typed, validated configuration
-- **Poetry** for dependency management
-- **Docker Compose** for local services
+- **Poetry**, **Docker Compose**, **pytest**
+
+## Endpoints
+
+| Method | Path | Auth | Description |
+| --- | --- | --- | --- |
+| GET | `/health` | no | Liveness check |
+| GET | `/auth/login` | no | Redirects to the Spotify consent screen |
+| GET | `/auth/callback` | no | Validates `state`, exchanges the code, issues a session JWT |
+| GET | `/auth/me` | yes | The authenticated user |
+| GET | `/stats/decades` | yes | Which decades your top tracks come from |
+| GET | `/stats/concentration` | yes | Distinct artists, tracks per artist, top 3 share |
+| GET | `/stats/comparison` | yes | Who entered, dropped, climbed and fell between two time ranges |
+| POST | `/stats/history/collect` | yes | Pulls the latest plays into your stored history |
+| GET | `/stats/patterns` | yes | Listening by hour, weekday and period, plus streaks |
+| GET | `/demo/*` | no | The same four statistics over a stored snapshot |
 
 ## Running locally
 
@@ -49,24 +68,51 @@ cd mysoundprint-api
 
 cp .env.example .env   # then fill in your Spotify credentials
 
-docker compose up -d
+docker compose up -d           # Postgres and Redis
 poetry install
+poetry run alembic upgrade head
 poetry run uvicorn app.main:app --reload
 ```
 
 Interactive docs at `http://127.0.0.1:8000/docs`.
 
+To run the API in a container as well:
+
+```bash
+docker compose --profile full up --build
+```
+
 ### Spotify credentials
 
 Create an app at the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard),
 select **Web API**, and register `http://127.0.0.1:8000/auth/callback` as the
-redirect URI. Copy the Client ID and Client Secret into your `.env`.
+redirect URI. Spotify rejects `localhost`, so the loopback IP is required.
+Copy the Client ID and Client Secret into your `.env`.
 
 Generate the JWT secret with:
 
 ```bash
 python -c "import secrets; print(secrets.token_hex(32))"
 ```
+
+### Demo snapshots
+
+The `/demo/*` endpoints read stored Spotify responses from `app/demo_data/`.
+Generate them from your own account after logging in once:
+
+```bash
+poetry run python -m scripts.build_demo_snapshot --user-id 1
+```
+
+### Tests
+
+```bash
+poetry run pytest -v
+```
+
+The suite covers the statistics functions only. They are pure: they take a
+payload and return a result, with no network, database or clock involved,
+which is exactly what makes them cheap to test.
 
 ## A note on Spotify's platform limits
 
@@ -76,8 +122,8 @@ owner, who also needs a Premium account. Extended quota mode is granted to
 organizations only.
 
 This means you cannot simply log in with your own Spotify account here. The
-API is therefore built with a demo mode that serves a stored snapshot through
-the same endpoints, so the project can be explored without an account.
+`/demo/*` endpoints therefore serve a stored snapshot through the exact same
+statistics code, so the project can be explored without an account.
 
 The Web API itself has also been shrinking. Apps registered after November
 2024 lost the Audio Features, Audio Analysis, Recommendations and Related
@@ -89,14 +135,59 @@ Every statistic here was designed against what the API actually returns
 today, verified by inspecting live responses rather than trusting the
 reference docs, which still describe fields that no longer arrive.
 
-## Endpoints
+## Design decisions
 
-| Method | Path             | Description                                            |
-| ------ | ---------------- | ------------------------------------------------------ |
-| GET    | `/health`        | Liveness check                                         |
-| GET    | `/auth/login`    | Redirects to the Spotify consent screen                |
-| GET    | `/auth/callback` | Validates `state` and exchanges the code for tokens    |
-| GET    | `/auth/me`       | Returns the authenticated user, requires a session JWT |
+**Redis for the OAuth state, not a cookie or a table.** The state is worthless
+after a few minutes, so a TTL deletes it with no cleanup job, and `GETDEL`
+consumes it atomically, which is what makes a replayed callback fail. The cost
+is a hard dependency on Redis in the login path.
+
+**Token expiry is stored as an instant, not a duration.** Spotify returns
+`expires_in: 3600`. A duration is meaningless without knowing when it started,
+so the addition happens once, on receipt. Answering "is this token still
+valid" is then a comparison instead of arithmetic, and the database itself can
+answer "whose tokens have expired".
+
+**The refresh response may omit the refresh token.** When it does, it means
+"keep the one you have". Overwriting it with `None` would lock the user out
+permanently, so the update falls back to the stored value.
+
+**Refresh happens 60 seconds early.** A token valid for three more seconds
+passes a naive check and then dies mid request. The margin removes that race.
+
+**The cache key contains the user id.** Without it, one user's top artists
+would be served to another. Every parameter that changes the result is in the
+key, including `limit`, or a request for 50 items would be answered with a
+cached 10.
+
+**429 is retried, but only briefly.** Spotify's `Retry-After` is honoured once,
+and only when it is short. A long wait is not worth freezing a request for, so
+the error propagates instead.
+
+**Listening history is collected, not fetched.** The recently played endpoint
+returns at most 50 plays and cannot be paginated into the past, so any real
+history has to be accumulated. Duplicates are prevented twice over: the `after`
+cursor asks Spotify only for what is new, and a unique constraint on
+`(user_id, played_at)` with `ON CONFLICT DO NOTHING` means the database refuses
+a duplicate even if two collectors run at once.
+
+**Timestamps are stored in UTC and converted on read.** "When do I listen" is a
+question about local time, so the timezone is a query parameter rather than a
+stored assumption. `zoneinfo` reads the IANA database from the operating
+system, which Windows and slim Docker images do not ship, so `tzdata` is a
+hard dependency rather than a convenience.
+
+**Statistics are pure functions.** They take a payload and return a result.
+That is what lets the demo endpoints reuse them untouched, and what makes the
+tests run without any infrastructure.
+
+## Known limitations
+
+- `release_date` is the album's date, not the recording's, so remasters and
+  re-recordings are counted in the decade they were reissued.
+- Concentration counts only the primary artist of each track, so the shares
+  add up to 100% at the cost of under-crediting featured artists.
+- The demo snapshots are real data from the author's account.
 
 ## Roadmap
 
@@ -104,8 +195,10 @@ reference docs, which still describe fields that no longer arrive.
 - [x] Persist users and tokens, issue a session JWT
 - [x] Automatic access token refresh
 - [x] Spotify API client with Redis caching and 429 handling
-- [ ] Statistics endpoints
-- [ ] Demo mode, tests and deployment
+- [x] Statistics endpoints
+- [x] Demo mode and tests
+- [ ] Deployment
+- [ ] Scheduled history collection
 
 ## License
 
