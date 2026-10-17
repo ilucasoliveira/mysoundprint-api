@@ -12,18 +12,21 @@ Create a project, then take the connection string from
 Two things to change in it:
 
 - the driver prefix becomes `postgresql+asyncpg://`
-- use the **transaction pooler** host (port `6543`), not the direct one
+- use the **session pooler** host (port `5432`), not the transaction pooler
 
-The transaction pooler resolves over IPv6 by default. On an IPv4-only
-network the connection fails with a name resolution error that looks like the
-host is wrong. The fallback is the **session pooler**, which Supabase offers
-for exactly that case.
+The pooler choice matters more than it looks. The transaction pooler hands
+out a different backend connection per transaction, which is right for
+serverless functions but wrong here: this API runs as a long lived container
+with SQLAlchemy's own connection pool, and `asyncpg` prepares statements on
+the server with sequential names. Two connections then collide on the same
+name and Postgres rejects it with `DuplicatePreparedStatementError`.
 
-Then append `?prepared_statement_cache_size=0` to the URI. This is not
-optional: `asyncpg` prepares statements by name, the transaction pooler hands
-out a different backend connection per transaction, and the prepared statement
-is not there any more. The symptom is an intermittent
-`InvalidSQLStatementNameError` that never reproduces locally.
+The session pooler keeps the connection for the whole session, so prepared
+statements behave normally. Appending `?prepared_statement_cache_size=0` is
+still worth it as a safety net.
+
+The transaction pooler also resolves over IPv6 by default. On an IPv4-only
+network that fails with a name resolution error that looks like a wrong host.
 
 Run the migrations once against that URL, from your machine:
 

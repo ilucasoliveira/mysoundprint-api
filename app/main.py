@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 
 from app.routers import auth, demo, stats
 
@@ -21,6 +22,15 @@ app = FastAPI(
         "email": "lucasoliveirapimentel.dev@gmail.com",
     },
 )
+
+
+@app.get("/", include_in_schema=False)
+async def root():
+    """Send anyone landing on the bare domain to the documentation.
+
+    Hidden from the schema: this is navigation, not part of the API.
+    """
+    return RedirectResponse("/docs")
 
 
 @app.get("/health", tags=["health"], status_code=200)
