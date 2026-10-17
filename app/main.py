@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 
+from app.config import settings
 from app.routers import auth, demo, stats
 
 DESCRIPTION = """Personal listening statistics built on top of the Spotify Web API.
@@ -21,6 +23,19 @@ app = FastAPI(
         "name": "Lucas de Oliveira Pimentel",
         "email": "lucasoliveirapimentel.dev@gmail.com",
     },
+)
+
+
+# The front end runs on a different origin, so the browser blocks its calls
+# until the API says which origins it trusts. Only the ones configured are
+# allowed: a wildcard here would let any site on the internet call this API
+# with a visitor's token.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.allowed_origins,
+    allow_credentials=False,
+    allow_methods=["GET", "POST"],
+    allow_headers=["Authorization", "Content-Type"],
 )
 
 

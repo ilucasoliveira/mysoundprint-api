@@ -63,8 +63,18 @@ async def spotify_callback(
     profile = await get_current_user_profile(token_data["access_token"])
 
     user = await upsert_user(db, profile, token_data)
+    session_token = create_access_token(user.id)
 
-    return {"access_token": create_access_token(user.id), "token_type": "bearer"}
+    if settings.frontend_url:
+        # The token travels in the fragment, after the #, which the browser
+        # never sends to any server: it stays out of access logs and out of
+        # the Referer header. The front end reads it and clears the URL.
+        target = f"{settings.frontend_url.rstrip('/')}/callback#token={session_token}"
+        return RedirectResponse(target)
+
+    # No front end configured: return the token so the whole flow stays
+    # testable from /docs.
+    return {"access_token": session_token, "token_type": "bearer"}
 
 
 @router.get("/me")
