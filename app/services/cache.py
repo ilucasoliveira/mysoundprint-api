@@ -1,8 +1,8 @@
 import json
-
 from collections.abc import Awaitable, Callable
 
 from app.services.redis_client import redis_client
+
 
 async def get_cached_or_fetch(key: str, ttl: int, fetcher: Callable[[], Awaitable[dict]], ) -> dict:
     cached = await redis_client.get(key)

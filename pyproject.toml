@@ -33,3 +33,37 @@ dev = [
     "ruff (>=0.16.8,<0.17.0)",
     "pytest (>=9.1.1,<10.0.0)"
 ]
+
+[tool.ruff]
+# Pinned explicitly rather than left to the default, which changes between
+# ruff releases and would turn a dependency bump into a failing pipeline.
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # import sorting
+    "UP",   # pyupgrade
+    "B",    # bugbear
+    "SIM",  # simplifications
+    "RUF",  # ruff's own
+]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI's whole dependency system is a call in a default argument, which is
+# exactly what B008 exists to catch. The pattern is deliberate here, so the
+# callables are declared immutable rather than the rule switched off.
+extend-immutable-calls = [
+    "fastapi.Depends",
+    "fastapi.Query",
+    "fastapi.Header",
+    "fastapi.Path",
+    "fastapi.Body",
+    "fastapi.security.HTTPBearer",
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Alembic writes these, and it does not wrap. Everything else still applies.
+"alembic/versions/*" = ["E501"]

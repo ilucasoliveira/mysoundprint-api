@@ -1,5 +1,7 @@
 # MySoundPrint API
 
+[![CI](https://github.com/ilucasoliveira/mysoundprint-api/actions/workflows/ci.yml/badge.svg)](https://github.com/ilucasoliveira/mysoundprint-api/actions/workflows/ci.yml)
+
 A FastAPI backend that turns your Spotify listening history into personal
 statistics: how your top artists and tracks shift across time ranges, how
 concentrated your listening is, which eras of music you actually play, and
@@ -9,11 +11,11 @@ when you play them.
 · [interactive docs](https://mysoundprint-api.onrender.com/docs)
 · [try it without an account](https://mysoundprint-api.onrender.com/demo/concentration)
 
+**Front end:** [mysoundprint.vercel.app](https://mysoundprint.vercel.app)
+· [repository](https://github.com/ilucasoliveira/mysoundprint-web)
+
 > The free Render instance sleeps after 15 minutes of inactivity, so the
 > first request can take up to a minute. Everything after that is fast.
-
-> **Work in progress.** The API is deployed and complete. A front end is
-> next.
 
 ## How the authentication works
 
@@ -62,6 +64,7 @@ token directly in the redirect URL.
 | GET | `/stats/concentration` | yes | Distinct artists, tracks per artist, top 3 share |
 | GET | `/stats/comparison` | yes | Who entered, dropped, climbed and fell between two time ranges |
 | POST | `/stats/history/collect` | yes | Pulls the latest plays into your stored history |
+| POST | `/stats/history/collect-all` | secret | Same, for every user; called by the scheduler |
 | GET | `/stats/patterns` | yes | Listening by hour, weekday and period, plus streaks |
 | GET | `/demo/*` | no | The same four statistics over a stored snapshot |
 
@@ -111,15 +114,64 @@ Generate them from your own account after logging in once:
 poetry run python -m scripts.build_demo_snapshot --user-id 1
 ```
 
-### Tests
+### Tests and linting
 
 ```bash
 poetry run pytest -v
+poetry run ruff check .
 ```
 
 The suite covers the statistics functions only. They are pure: they take a
 payload and return a result, with no network, database or clock involved,
 which is exactly what makes them cheap to test.
+
+Ruff's rule set is pinned in `pyproject.toml` rather than left to the default,
+which changes between releases and would turn a dependency bump into a failing
+pipeline. FastAPI's `Depends` and friends are declared immutable instead of
+switching off B008, since a call in a default argument is the framework's
+whole dependency system rather than the mistake that rule exists to catch.
+
+## Scheduled history collection
+
+Spotify returns at most the last 50 plays and cannot page further back, so a
+week nobody collects is a week gone for good. A GitHub Actions workflow calls
+`POST /stats/history/collect-all` every hour, which turns the history from
+something a user has to remember into something that accumulates.
+
+GitHub runs it rather than Render, where cron jobs are a paid feature, and
+rather than an in-process scheduler, which would die with a service that
+spins down after fifteen minutes without traffic. The call also wakes the
+instance, so the first human visitor of the hour meets a warm one.
+
+There is no user to authenticate: the scheduler holds no session, and a
+session JWT would expire long before the next run. The route takes a shared
+secret in `X-Cron-Secret` instead, compared with `secrets.compare_digest` so
+the time the comparison takes says nothing about how much of the secret was
+right. An unset or empty `CRON_SECRET` makes the route answer 503 rather than
+accepting the empty string, so a deployment that forgets it fails closed.
+
+To enable it: set `CRON_SECRET` on the service, and add the same value as a
+repository secret under Settings > Secrets and variables > Actions.
+
+```bash
+python -c "import secrets; print(secrets.token_urlsafe(32))"
+```
+
+## Continuous integration and deployment
+
+`.github/workflows/ci.yml` runs ruff and pytest on every push and pull
+request. A push to `main` that passes then calls a Render deploy hook; a pull
+request stops at the checks, which is the point of the gate.
+
+This requires Render's own auto-deploy to be **off**, under Settings > Build
+and Deploy. Left on, Render deploys on every push whether or not the tests
+passed, and the gate is decoration. The hook URL goes in the
+`RENDER_DEPLOY_HOOK_URL` repository secret.
+
+Poetry is pinned to the same version in the workflow and in the `Dockerfile`,
+because a different one reads `poetry.lock` differently and fails with
+"pyproject.toml changed significantly", which is an obscure way to be told
+the tool versions disagree.
 
 ## A note on Spotify's platform limits
 
@@ -184,6 +236,13 @@ stored assumption. `zoneinfo` reads the IANA database from the operating
 system, which Windows and slim Docker images do not ship, so `tzdata` is a
 hard dependency rather than a convenience.
 
+**The scheduled collector authenticates with a secret, not a token.** Every
+other write on this API belongs to a user and carries their JWT. That one has
+no user behind it and runs unattended, so it takes a shared secret instead,
+and the comparison is constant time. The endpoint is in the public schema
+rather than hidden: the secret is the protection, and a route nobody can see
+is not a route nobody can find.
+
 **Statistics are pure functions.** They take a payload and return a result.
 That is what lets the demo endpoints reuse them untouched, and what makes the
 tests run without any infrastructure.
@@ -205,7 +264,9 @@ tests run without any infrastructure.
 - [x] Statistics endpoints
 - [x] Demo mode and tests
 - [x] Deployment
-- [ ] Scheduled history collection
+- [x] Scheduled history collection
+- [x] React front end
+- [x] Continuous integration and gated deployment
 
 ## License
 

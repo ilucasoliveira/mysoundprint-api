@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from functools import lru_cache
 from pathlib import Path
 
@@ -10,7 +10,7 @@ class DemoPlay:
     """Mirrors the attributes temporal_stats reads from a ListeningHistory
     row, so the same pure functions serve both real and demo data."""
 
-    __slots__ = ("played_at", "duration_ms", "track_name", "artist_name")
+    __slots__ = ("artist_name", "duration_ms", "played_at", "track_name")
 
     def __init__(
         self,
@@ -48,7 +48,7 @@ def demo_history(days: int = 90) -> list[DemoPlay]:
     """Build a listening history anchored to today, so the demo always shows
     a recent window instead of a frozen date in the past."""
     payload = load_snapshot("recently_played")
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
 
     plays: list[DemoPlay] = []
     for offset, item in enumerate(payload.get("items", [])):

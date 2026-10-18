@@ -16,12 +16,11 @@ import asyncio
 import json
 from pathlib import Path
 
-from scripts._slim import slim_payload
-
 from app.models.database import SessionLocal
 from app.models.user import User
 from app.services.spotify_client import get_top_items, spotify_get
 from app.services.user_service import get_valid_access_token
+from scripts._slim import slim_payload
 
 DEMO_DIR = Path(__file__).resolve().parent.parent / "app" / "demo_data"
 TIME_RANGES = ("short_term", "medium_term", "long_term")

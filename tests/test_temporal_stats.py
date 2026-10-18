@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from app.services.temporal_stats import listening_streak, temporal_patterns
 
@@ -22,13 +22,13 @@ class TestTemporalPatterns:
 
     def test_converts_utc_to_the_requested_timezone(self):
         """21:00 UTC is 18:00 in Sao Paulo, so the peak has to shift."""
-        play = fake_play(datetime(2026, 9, 28, 21, 0, tzinfo=timezone.utc))
+        play = fake_play(datetime(2026, 9, 28, 21, 0, tzinfo=UTC))
 
         assert temporal_patterns([play], "UTC")["peak_hour"] == 21
         assert temporal_patterns([play], "America/Sao_Paulo")["peak_hour"] == 18
 
     def test_total_minutes_sums_durations(self):
-        play = fake_play(datetime(2026, 9, 28, tzinfo=timezone.utc), 180_000)
+        play = fake_play(datetime(2026, 9, 28, tzinfo=UTC), 180_000)
         assert temporal_patterns([play, play])["total_minutes"] == 6.0
 
 
@@ -37,7 +37,7 @@ class TestListeningStreak:
         assert listening_streak(plays)["longest_streak"] == 5
 
     def test_gap_breaks_the_streak(self):
-        base = datetime(2026, 9, 1, 12, 0, tzinfo=timezone.utc)
+        base = datetime(2026, 9, 1, 12, 0, tzinfo=UTC)
         items = [fake_play(base + timedelta(days=day)) for day in (0, 1, 2, 10, 11)]
 
         result = listening_streak(items)

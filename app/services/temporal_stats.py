@@ -1,5 +1,6 @@
 from collections import Counter
-from datetime import timedelta, timezone
+from datetime import UTC, timedelta
+from itertools import pairwise
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 WEEKDAY_NAMES = [
@@ -57,7 +58,7 @@ def temporal_patterns(plays: list, tz_name: str = "UTC") -> dict:
     for play in plays:
         played_at = play.played_at
         if played_at.tzinfo is None:
-            played_at = played_at.replace(tzinfo=timezone.utc)
+            played_at = played_at.replace(tzinfo=UTC)
         local = played_at.astimezone(tz)
 
         hours[local.hour] += 1
@@ -135,7 +136,7 @@ def listening_streak(plays: list, tz_name: str = "UTC") -> dict:
         return {"longest_streak": 0, "current_streak": 0, "active_days": 0}
 
     longest = current = 1
-    for previous, day in zip(days, days[1:]):
+    for previous, day in pairwise(days):
         if day - previous == timedelta(days=1):
             current += 1
             longest = max(longest, current)

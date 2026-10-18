@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 import pytest
 
@@ -33,7 +33,7 @@ def make_payload():
 
 @pytest.fixture
 def plays() -> list[FakePlay]:
-    base = datetime(2026, 9, 28, 21, 0, tzinfo=timezone.utc)
+    base = datetime(2026, 9, 28, 21, 0, tzinfo=UTC)
     return [
         FakePlay(base + timedelta(days=day, hours=hour))
         for day in range(5)

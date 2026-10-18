@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# A second push to the same branch makes the first run pointless, so it is
+# cancelled rather than left burning a runner to produce a stale verdict.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Lint and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # Pinned to the version that generated poetry.lock, and the same one the
+      # Dockerfile installs. A different Poetry reads the lock differently and
+      # fails with "pyproject.toml changed significantly", which is a confusing
+      # way to be told the tool versions disagree.
+      - name: Install Poetry
+        run: pipx install poetry==2.4.1
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+          cache: poetry
+
+      - name: Install dependencies
+        run: poetry install --no-interaction
+
+      - name: Lint
+        run: poetry run ruff check .
+
+      - name: Test
+        run: poetry run pytest -q
+
+  deploy:
+    name: Deploy to Render
+    needs: check
+    # Only a push to main deploys. A pull request runs the checks and stops
+    # there, which is the entire point of having the gate.
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the deploy
+        run: |
+          if [ -z "${RENDER_DEPLOY_HOOK_URL}" ]; then
+            echo "::error::RENDER_DEPLOY_HOOK_URL is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          curl --fail --silent --show-error -X POST "${RENDER_DEPLOY_HOOK_URL}"
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}

@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from sqlalchemy import func, select
 from sqlalchemy.dialects.postgresql import insert
@@ -92,8 +92,8 @@ async def collect_recently_played(db: AsyncSession, user: User) -> dict:
 async def load_history(
     db: AsyncSession, user: User, days: int = 90
 ) -> list[ListeningHistory]:
-    cutoff = datetime.now(timezone.utc).timestamp() - days * 86400
-    cutoff_dt = datetime.fromtimestamp(cutoff, tz=timezone.utc)
+    cutoff = datetime.now(UTC).timestamp() - days * 86400
+    cutoff_dt = datetime.fromtimestamp(cutoff, tz=UTC)
 
     result = await db.execute(
         select(ListeningHistory)

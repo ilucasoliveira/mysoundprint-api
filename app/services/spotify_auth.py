@@ -1,4 +1,5 @@
 import base64
+
 import httpx
 
 from app.config import settings
@@ -7,7 +8,8 @@ SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token"
 SPOTIFY_API_BASE_URL = "https://api.spotify.com/v1"
 
 def _build_basic_auth_header() -> str:
-    spotify_client_data = f"{settings.spotify_client_id}:{settings.spotify_client_secret.get_secret_value()}"
+    client_secret = settings.spotify_client_secret.get_secret_value()
+    spotify_client_data = f"{settings.spotify_client_id}:{client_secret}"
     
     credentials_bytes = spotify_client_data.encode()
     encoded = base64.b64encode(credentials_bytes)

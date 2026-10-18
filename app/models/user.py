@@ -1,8 +1,10 @@
 from datetime import datetime
-from sqlalchemy import Integer, String, DateTime, func
+
+from sqlalchemy import DateTime, Integer, String, func
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.models.database import Base
+
 
 class User(Base):
     __tablename__ = "users"

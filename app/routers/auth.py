@@ -1,18 +1,17 @@
 import secrets
-
-from fastapi import APIRouter, HTTPException, Depends
-from fastapi.responses import RedirectResponse
-from sqlalchemy.ext.asyncio import AsyncSession
 from urllib.parse import urlencode
 
+from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import RedirectResponse
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import settings
 from app.models.database import get_db
 from app.models.user import User
 from app.services.redis_client import redis_client
+from app.services.security import create_access_token, get_current_user
 from app.services.spotify_auth import exchange_code_for_token, get_current_user_profile
 from app.services.user_service import upsert_user
-from app.services.security import create_access_token, get_current_user
 
 SPOTIFY_AUTH_URL = "https://accounts.spotify.com/authorize"
 SCOPES = "user-top-read user-read-recently-played"

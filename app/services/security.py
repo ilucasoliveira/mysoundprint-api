@@ -1,7 +1,7 @@
-import jwt
+from datetime import UTC, datetime, timedelta
 
-from datetime import datetime, timezone, timedelta
-from fastapi import HTTPException, Depends
+import jwt
+from fastapi import Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -16,7 +16,7 @@ CREDENTIALS_EXCEPTION = HTTPException(
 )
 
 def create_access_token(user_id: int) -> str:
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
     exp = now + timedelta(minutes=settings.access_token_expire_minutes)
     payload = {
         "sub": str(user_id),
@@ -30,15 +30,21 @@ def decode_access_token(token: str) -> int:
     try:
         secret_key = settings.jwt_secret_key.get_secret_value()
         decoded_token = jwt.decode(token, secret_key, algorithms=[settings.jwt_algorithm])
+    # `from None` on purpose. An expired token and a forged one are different
+    # facts, and the caller is told neither: the same opaque 401 goes back
+    # either way, with no chained traceback hinting at which it was.
     except jwt.exceptions.ExpiredSignatureError:
-        raise CREDENTIALS_EXCEPTION
+        raise CREDENTIALS_EXCEPTION from None
     except jwt.exceptions.InvalidTokenError:
-        raise CREDENTIALS_EXCEPTION
+        raise CREDENTIALS_EXCEPTION from None
     
     user_id = int(decoded_token["sub"])
     return user_id
 
-async def get_current_user(auth: HTTPAuthorizationCredentials | None = Depends(HTTPBearer(auto_error=False)), db: AsyncSession = Depends(get_db)) -> User:
+async def get_current_user(
+    auth: HTTPAuthorizationCredentials | None = Depends(HTTPBearer(auto_error=False)),
+    db: AsyncSession = Depends(get_db),
+) -> User:
     if auth is None:
         raise CREDENTIALS_EXCEPTION
     
