@@ -56,7 +56,8 @@ token directly in the redirect URL.
 
 | Method | Path | Auth | Description |
 | --- | --- | --- | --- |
-| GET | `/health` | no | Liveness check |
+| GET | `/health` | no | Liveness: the process is running |
+| GET | `/health/ready` | no | Readiness: Postgres and Redis are reachable; 503 when not |
 | GET | `/auth/login` | no | Redirects to the Spotify consent screen |
 | GET | `/auth/callback` | no | Validates `state`, exchanges the code, issues a session JWT |
 | GET | `/auth/me` | yes | The authenticated user |
@@ -235,6 +236,15 @@ question about local time, so the timezone is a query parameter rather than a
 stored assumption. `zoneinfo` reads the IANA database from the operating
 system, which Windows and slim Docker images do not ship, so `tzdata` is a
 hard dependency rather than a convenience.
+
+**Liveness and readiness are separate routes.** `/health` touches nothing
+external and cannot fail for a reason outside the process. `/health/ready`
+queries Postgres and pings Redis, and answers 503 when either is unreachable.
+Merging them is the tempting mistake: a platform health check pointed at a
+route that fails when the database blinks will kill and restart the container,
+so a ten second dependency outage becomes a restart loop. The split also means
+the monitor gets something it can act on, since a 200 carrying
+`"database": "unreachable"` reads as healthy to every uptime monitor there is.
 
 **The scheduled collector authenticates with a secret, not a token.** Every
 other write on this API belongs to a user and carries their JWT. That one has
