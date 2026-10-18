@@ -1,9 +1,12 @@
 import asyncio
+import secrets
 from typing import Literal
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, Header, HTTPException, Query
+from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.config import settings
 from app.models.database import get_db
 from app.models.user import User
 from app.services.history_service import collect_recently_played, load_history
@@ -77,6 +80,73 @@ async def collect_history(
     db: AsyncSession = Depends(get_db),
 ) -> dict:
     return await collect_recently_played(db, current_user)
+
+
+async def verify_cron_secret(x_cron_secret: str | None = Header(default=None)) -> None:
+    """Guard the collector that runs for every user.
+
+    There is no user to authenticate here: the scheduler holds no session and a
+    JWT would expire long before the next run. So the route takes a shared
+    secret instead, compared with `compare_digest` rather than `==` so that the
+    time the comparison takes says nothing about how much of the secret was
+    right.
+    """
+    configured = settings.cron_secret
+    # An empty value counts as unset. `CRON_SECRET=` sitting in a .env file
+    # parses as the empty string rather than None, and without this the empty
+    # string would be a valid secret that anyone could send.
+    expected = configured.get_secret_value() if configured is not None else ""
+    if not expected:
+        raise HTTPException(status_code=503, detail="Scheduled collection is not configured")
+
+    if x_cron_secret is None or not secrets.compare_digest(x_cron_secret, expected):
+        raise HTTPException(status_code=401, detail="Invalid or missing cron secret")
+
+
+@router.post(
+    "/history/collect-all",
+    status_code=200,
+    summary="Collect for every user (scheduled; requires the X-Cron-Secret header)",
+    dependencies=[Depends(verify_cron_secret)],
+)
+async def collect_history_for_everyone(db: AsyncSession = Depends(get_db)) -> dict:
+    """Pull the latest plays for every account.
+
+    Spotify only ever returns the last 50 plays and cannot page further back,
+    so a week without collecting is a week lost for good. This is what turns the
+    history from something a person has to remember into something that simply
+    accumulates.
+
+    Users are walked one at a time on purpose. `asyncio.gather` would be faster
+    and would also fire every request at Spotify at once, which is how a run
+    earns a 429 for everybody. One failure is contained to its own user: a
+    revoked refresh token should cost that account its turn, not the whole run.
+    """
+    users = (await db.execute(select(User))).scalars().all()
+
+    collected = 0
+    inserted = 0
+    failed: list[int] = []
+
+    for user in users:
+        try:
+            result = await collect_recently_played(db, user)
+        except Exception:
+            # The session is left mid-transaction by a failed commit, so it has
+            # to be rolled back before the next user can use it.
+            await db.rollback()
+            failed.append(user.id)
+            continue
+
+        collected += 1
+        inserted += result["inserted"]
+
+    return {
+        "users": len(users),
+        "collected": collected,
+        "inserted": inserted,
+        "failed": failed,
+    }
 
 
 @router.get("/patterns", status_code=200, summary="When you listen, from your stored history")

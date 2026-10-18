@@ -19,6 +19,11 @@ class Settings(BaseSettings):
     # Where the OAuth callback sends the browser once the session exists.
     # Left unset, the callback returns the token as JSON instead, which keeps
     # the whole flow testable from /docs while no front end exists.
+    # Shared secret for the scheduled collector. Left unset the endpoint
+    # refuses every call, so a deployment that forgets it fails closed rather
+    # than exposing a route that writes for every user.
+    cron_secret: SecretStr | None = None
+
     frontend_url: str | None = None
 
     # Comma separated list of origins allowed to call this API from a browser.

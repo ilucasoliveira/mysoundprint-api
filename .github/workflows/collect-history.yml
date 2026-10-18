@@ -1,0 +1,30 @@
+name: Collect listening history
+
+# Spotify returns only the last 50 plays and cannot page further back, so the
+# history has to be picked up while it is still there. Hourly is comfortably
+# often enough: nobody plays 50 tracks in an hour.
+#
+# GitHub runs this, not Render, because cron jobs there are a paid feature and
+# an in-process scheduler would die with the service, which spins down after
+# fifteen minutes without traffic on the free plan. The side effect is useful:
+# the call wakes the API, so the first human visitor of the hour meets a warm one.
+on:
+  schedule:
+    # Minute 7, not 0. Every scheduled workflow on GitHub asks for the top of
+    # the hour, and the queue at that minute is where delays come from.
+    - cron: '7 * * * *'
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the collector
+        run: |
+          curl --fail --silent --show-error \
+            --max-time 180 --retry 3 --retry-all-errors --retry-delay 20 \
+            -X POST "${API_BASE_URL%/}/stats/history/collect-all" \
+            -H "X-Cron-Secret: ${CRON_SECRET}"
+        env:
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
