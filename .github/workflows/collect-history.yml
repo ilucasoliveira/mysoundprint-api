@@ -15,16 +15,33 @@ on:
     - cron: '7 * * * *'
   workflow_dispatch:
 
+# Public information, so it lives here rather than in a secret. A secret would
+# be one more thing to configure, and GitHub masks secrets in the logs, which
+# turns a typo in a URL into an error message with the URL blanked out.
+env:
+  API_BASE_URL: https://mysoundprint-api.onrender.com
+
 jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
+      # A missing secret expands to an empty string rather than failing, so the
+      # run would otherwise reach curl and fail there, five retries later, with
+      # an error about the request instead of about the configuration.
+      - name: Check the secret is configured
+        run: |
+          if [ -z "${CRON_SECRET}" ]; then
+            echo "::error::CRON_SECRET is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+
       - name: Call the collector
         run: |
           curl --fail --silent --show-error \
             --max-time 180 --retry 3 --retry-all-errors --retry-delay 20 \
-            -X POST "${API_BASE_URL%/}/stats/history/collect-all" \
+            -X POST "${API_BASE_URL}/stats/history/collect-all" \
             -H "X-Cron-Secret: ${CRON_SECRET}"
         env:
-          API_BASE_URL: ${{ secrets.API_BASE_URL }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
