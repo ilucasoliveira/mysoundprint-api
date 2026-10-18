@@ -35,21 +35,44 @@ def _build_name_map(data: dict) -> dict[str, str]:
     return {item["id"]: item["name"] for item in data["items"]}
 
 
+def _build_detail_map(data: dict) -> dict[str, dict]:
+    """Image and Spotify link per item, for whichever side has them."""
+    details = {}
+    for item in data["items"]:
+        images = item.get("images") or (item.get("album") or {}).get("images") or []
+        details[item["id"]] = {
+            "image": images[0].get("url") if images else None,
+            "spotify_url": (item.get("external_urls") or {}).get("spotify"),
+        }
+    return details
+
+
 def compare_time_ranges(baseline: dict, current: dict) -> dict:
     baseline_positions = _build_position_map(baseline)
     current_positions = _build_position_map(current)
     names = _build_name_map(baseline) | _build_name_map(current)
+    details = _build_detail_map(baseline) | _build_detail_map(current)
 
     baseline_ids = set(baseline_positions)
     current_ids = set(current_positions)
 
     entered = [
-        {"id": item_id, "name": names[item_id], "position": current_positions[item_id]}
+        {
+            "id": item_id,
+            "name": names[item_id],
+            "position": current_positions[item_id],
+            **details.get(item_id, {}),
+        }
         for item_id in sorted(current_ids - baseline_ids, key=current_positions.get)
     ]
 
     dropped = [
-        {"id": item_id, "name": names[item_id], "position": baseline_positions[item_id]}
+        {
+            "id": item_id,
+            "name": names[item_id],
+            "position": baseline_positions[item_id],
+            **details.get(item_id, {}),
+        }
         for item_id in sorted(baseline_ids - current_ids, key=baseline_positions.get)
     ]
 
@@ -72,6 +95,7 @@ def compare_time_ranges(baseline: dict, current: dict) -> dict:
             "from_position": before,
             "to_position": after,
             "change": abs(change),
+            **details.get(item_id, {}),
         }
 
         if change > 0:
@@ -92,8 +116,18 @@ def compare_time_ranges(baseline: dict, current: dict) -> dict:
     }
 
 
+def _artwork(item: dict) -> str | None:
+    """Smallest album cover Spotify sent for this track.
+
+    Spotify's guidelines require its artwork to be used as provided, so the
+    URL is passed through untouched and never re-hosted or edited."""
+    images = (item.get("album") or {}).get("images") or []
+    return images[0].get("url") if images else None
+
+
 def listening_concentration(data: dict, top_n: int = 5) -> dict:
-    primary_artists = [item["artists"][0]["name"] for item in data["items"]]
+    items = data["items"]
+    primary_artists = [item["artists"][0]["name"] for item in items]
 
     total = len(primary_artists)
     counter = Counter(primary_artists)
@@ -101,13 +135,29 @@ def listening_concentration(data: dict, top_n: int = 5) -> dict:
 
     top_3_count = sum(count for _, count in counter.most_common(3))
 
+    # One representative track per artist, so the ranking can show cover art
+    # without a second request to Spotify.
+    sample: dict[str, dict] = {}
+    for item in items:
+        name = item["artists"][0]["name"]
+        sample.setdefault(name, item)
+
     return {
         "total_tracks": total,
         "distinct_artists": len(counter),
         "tracks_per_artist": round(total / len(counter), 2),
         "top_3_share": round(top_3_count / total * 100, 1),
         "top_artists": [
-            {"name": name, "count": count, "share": round(count / total * 100, 1)}
+            {
+                "name": name,
+                "count": count,
+                "share": round(count / total * 100, 1),
+                "image": _artwork(sample.get(name, {})),
+                "track_name": sample.get(name, {}).get("name"),
+                "spotify_url": (sample.get(name, {}).get("external_urls") or {}).get(
+                    "spotify"
+                ),
+            }
             for name, count in ranking
         ],
     }
