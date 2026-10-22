@@ -19,7 +19,7 @@ on:
 # be one more thing to configure, and GitHub masks secrets in the logs, which
 # turns a typo in a URL into an error message with the URL blanked out.
 env:
-  API_BASE_URL: https://mysoundprint-api.onrender.com
+  API_BASE_URL: https://mysoundprint-api-yoco.onrender.com
 
 jobs:
   collect:

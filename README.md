@@ -7,9 +7,9 @@ statistics: how your top artists and tracks shift across time ranges, how
 concentrated your listening is, which eras of music you actually play, and
 when you play them.
 
-**Live:** [mysoundprint-api.onrender.com](https://mysoundprint-api.onrender.com)
-· [interactive docs](https://mysoundprint-api.onrender.com/docs)
-· [try it without an account](https://mysoundprint-api.onrender.com/demo/concentration)
+**Live:** [mysoundprint-api-yoco.onrender.com](https://mysoundprint-api-yoco.onrender.com)
+· [interactive docs](https://mysoundprint-api-yoco.onrender.com/docs)
+· [try it without an account](https://mysoundprint-api-yoco.onrender.com/demo/concentration)
 
 **Front end:** [mysoundprint.vercel.app](https://mysoundprint.vercel.app)
 · [repository](https://github.com/ilucasoliveira/mysoundprint-web)
